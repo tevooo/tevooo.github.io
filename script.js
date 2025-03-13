@@ -154,7 +154,7 @@ new TypeIt("#teks2", {
 	" ",
     "mutluuu yıllarrrrrrr jimjimemmmm 🎈🎂"
   ],
-  startDelay: 1000
+  startDelay: 1000,
   speed: 85,
   waitUntilVisible: true
 }).go();
