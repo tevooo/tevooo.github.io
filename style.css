@@ -5,7 +5,7 @@ html {
   text-align: center;
   margin: 0;
   padding: 0;
-  -webkit-overflow-scrolling: touch; /* iOS için kaydırma düzeltmesi */
+  -webkit-overflow-scrolling: touch; /* iOS için kaydırma */
 }
 
 .bg {
@@ -70,17 +70,7 @@ html {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
   overflow: hidden;
   position: relative;
-  opacity: 0;
-  visibility: hidden; /* iOS için ek kontrol */
-  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Görünürlük gecikmesini kaldır */
-  -webkit-transition: opacity 0.5s ease, visibility 0s 0.5s; /* iOS Safari için */
-}
-
-.paper:not(.d-none) {
-  opacity: 1;
-  visibility: visible; /* Göründüğünde tamamen görünür */
-  transition: opacity 0.5s ease, visibility 0s 0s; /* Görünürken gecikme yok */
-  -webkit-transition: opacity 0.5s ease, visibility 0s 0s; /* iOS Safari için */
+  /* Opacity ve visibility kaldırıldı, sadece display ile çalışıyoruz */
 }
 
 .paper:before {
@@ -205,7 +195,7 @@ li span {
   }
   .img {
     width: 60vw;
-  }
+ GRADE
   #cakeTap, #tap, #trims {
     font-size: 14px;
   }
