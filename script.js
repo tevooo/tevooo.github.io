@@ -127,10 +127,14 @@ const _slideFoto = function () {
 // Özelleştirilmiş metinler
 new TypeIt("#teks1", {
   strings: [
-    "Sevgili arkadaşım,",
-    "Yeni yaşın sana mutluluk ve sağlık getirsin!",
-    "Her zaman yanındayım."
-  ],
+    "kirazimm balımmmm 🍒,",
+    "benimmm neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn, jimjimemmm 💋",
+	" ",
+    "iyi ki doğdunnnn iyi ki varsın hayatimmmm. yeni yaşın sana mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara vesile olsun💝",
+	" ",
+	"kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz.",
+	" "
+	  ],
   startDelay: 2000,
   speed: 100,
   waitUntilVisible: true
@@ -138,14 +142,27 @@ new TypeIt("#teks1", {
 
 new TypeIt("#teks2", {
   strings: [
-    "Doğum günün kutlu olsun!",
-    "Sana en güzel dileklerimi sunuyorum.",
-    "- Mutlu yıllar!"
+    "sen benim için çok değerlisin bir o kadar özelsin, iyi ki tanıştık iyi ki varsınnnn 🥳🥳",
+	" ",
+	"her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan mutluluk duyacağım ❤",
+	" ",
+    "tekrardan iyi doğdun iyi ki varsın kirazimmmmm🍒🍒",
+	" ",
+    "mutluuu yıllarrrrrrr 🎈🎂"
   ],
   startDelay: 1000,
-  speed: 75,
+  speed: 85,
   waitUntilVisible: true
 }).go();
+
+new TypeIt("#trims", {
+  strings: ["iyi doğdun iyi ki varsın seni çok seviyorum nice mutlu yıllara <333"],
+  startDelay: 1010,
+  speed: 75,
+  loop: false,
+  waitUntilVisible: true
+}).go();
+
 
 new TypeIt("#trims", {
   strings: ["Teşekkür ederim!"],
