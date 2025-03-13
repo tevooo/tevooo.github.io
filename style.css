@@ -14,7 +14,7 @@ html {
   background-attachment: fixed;
   background-size: cover;
   background-color: #FEC0CD;
-  height: 100vh; /* .bg için önceki haline döndüm */
+  height: 100vh;
   width: 100vw;
   overflow-y: auto;
   display: flex;
@@ -24,7 +24,6 @@ html {
   padding-bottom: 20px;
 }
 
-/* Tüm slaytları kapsayan konteyner */
 .slide-container {
   display: flex;
   flex-direction: column;
@@ -32,7 +31,7 @@ html {
   align-items: center;
   width: 100%;
   max-width: 800px;
-  height: 100vh; /* .slide-container için önceki haline döndüm */
+  height: 100vh;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -61,8 +60,8 @@ html {
   font-family: 'Patrick Hand', cursive;
   width: 90%;
   max-width: 800px;
-  height: 80vh; /* Defteri uzattım (önceki: 60vh) */
-  max-height: 720px; /* Maksimum yüksekliği artırdım (önceki: 540px) */
+  height: 80vh;
+  max-height: 720px;
   margin: 15px 0;
   background: #fafafa;
   border-radius: 10px;
@@ -91,14 +90,14 @@ html {
   bottom: 30px;
   left: 50px;
   background: linear-gradient(transparent, transparent 28px, #91D1D3 28px);
-  background-size: 30px 30px;
+  background-size: 30px 30px; /* Çizgi aralığı */
 }
 
 .paper-content .teks {
   text-align: left;
   width: 100%;
   height: 100%;
-  line-height: 30px;
+  line-height: 30px; /* Çizgi aralığı ile uyumlu */
   padding: 0 10px;
   border: 0;
   outline: 0;
@@ -155,12 +154,23 @@ li span {
 /* Mobil ayarlar */
 @media (max-width: 768px) {
   .paper {
-    height: 70vh; /* Mobil için biraz daha kısa ama hala uzun */
+    height: 70vh;
     max-height: 600px;
   }
+  .paper-content {
+    background-size: 25px 25px; /* Mobil için çizgi aralığını küçülttüm */
+    top: 25px; /* Üst boşluğu azalttım */
+    bottom: 25px;
+    left: 45px; /* Sol boşluğu biraz azalttım */
+  }
   .paper-content .teks {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 16px; /* Yazı boyutunu küçülttüm */
+    line-height: 25px; /* Çizgi aralığı ile uyumlu */
+    padding: 0 8px; /* Padding’i azalttım */
+  }
+  .paper:before {
+    width: 40px; /* Sol kenar çubuğunu küçülttüm */
+    background-size: 25px 25px; /* Çizgi aralığını uyumlu hale getirdim */
   }
   .img {
     width: 60vw;
@@ -179,8 +189,23 @@ li span {
 /* Daha küçük ekranlar için */
 @media (max-width: 480px) {
   .paper {
-    height: 65vh; /* Çok küçük ekranlar için optimize */
+    height: 65vh;
     max-height: 500px;
+  }
+  .paper-content {
+    background-size: 20px 20px; /* Daha küçük ekranlar için daha küçük çizgiler */
+    top: 20px;
+    bottom: 20px;
+    left: 40px;
+  }
+  .paper-content .teks {
+    font-size: 14px; /* Daha küçük font */
+    line-height: 20px; /* Çizgi aralığı ile uyumlu */
+    padding: 0 6px;
+  }
+  .paper:before {
+    width: 35px;
+    background-size: 20px 20px;
   }
   .img {
     width: 50vw;
