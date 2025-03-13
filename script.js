@@ -159,16 +159,22 @@ new TypeIt("#teks2", {
   waitUntilVisible: true
 }).go();
 
-new TypeIt("#trims", {
-  strings: ["iyi ki doğdun iyi ki varsın kirazımmm Seni çok ama çokkk seviyorum nice mutlu yıllara <333"],
-  startDelay: 100,
-  speed: 85,
-  loop: true,
-  waitUntilVisible: true
-})
-.pause(10000)  // Yazı tamamlandıktan sonra 5 saniye bekle
-//.go();
-
+document.addEventListener("DOMContentLoaded", function () {
+  // Önce #trims'i görünür yap
+  let trimsEl = document.querySelector("#trims");
+  trimsEl.classList.remove("d-none"); // d-none kaldır
+  
+  new TypeIt("#trims", {
+    strings: ["İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333"],
+    startDelay: 2000,
+    speed: 75,
+    waitUntilVisible: true,
+    afterComplete: function (instance) {
+      trimsEl.innerHTML = "İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333";
+      instance.destroy(); // Animasyonu durdur, yazıyı sabitle
+    }
+  }).go();
+});
 
 // Kiraz Yağmuru Fonksiyonu
 function cherryRain() {
