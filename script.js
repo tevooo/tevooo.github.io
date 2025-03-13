@@ -162,11 +162,11 @@ new TypeIt("#teks2", {
 new TypeIt("#trims", {
   strings: ["iyi ki doğdun iyi ki varsın kirazımmm Seni çok ama çokkk seviyorum nice mutlu yıllara <333"],
   startDelay: 2000,
-  speed: 75,
+  speed: 55,
   loop: false,
   waitUntilVisible: true
 })
-.pause(5000)  // Yazı tamamlandıktan sonra 5 saniye bekle
+.pause(8000)  // Yazı tamamlandıktan sonra 5 saniye bekle
 .go();
 
 
