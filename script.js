@@ -159,22 +159,40 @@ new TypeIt("#teks2", {
   waitUntilVisible: true
 }).go();
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Önce #trims'i görünür yap
-  let trimsEl = document.querySelector("#trims");
-  trimsEl.classList.remove("d-none"); // d-none kaldır
-  
-  new TypeIt("#trims", {
-    strings: ["İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333"],
-    startDelay: 2000,
-    speed: 75,
-    waitUntilVisible: true,
-    afterComplete: function (instance) {
-      trimsEl.innerHTML = "İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333";
-      instance.destroy(); // Animasyonu durdur, yazıyı sabitle
-    }
-  }).go();
-});
+const _slideLima = function () {
+  const slideLima = document.getElementById('slideLima');
+  const trims = document.getElementById('trims');
+
+  slideLima.classList.remove('d-none');
+  console.log("Slide Lima gösterildi");
+
+  setTimeout(() => {
+    trims.classList.remove('d-none');
+    console.log("trims göründü");
+
+    new TypeIt("#trims", {
+      strings: ["İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333"],
+      startDelay: 2000,
+      speed: 75,
+      waitUntilVisible: true,
+      afterComplete: function (instance) {
+        console.log("trims yazımı tamamlandı");
+        trims.innerHTML = "İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333";
+        instance.destroy(); // Animasyonu durdur, yazıyı sabitle
+        // Kapanma animasyonunu başlat
+        slideLima.classList.add('animate__fadeOut');
+        trims.classList.add('animate__fadeOut');
+        setTimeout(() => {
+          trims.classList.add('d-none');
+          slideLima.classList.add('d-none');
+          slideLima.classList.remove('animate__fadeOut');
+          trims.classList.remove('animate__fadeOut');
+          _slideFoto();
+        }, 2000); // Yazı tamamlandıktan sonra 2 saniye daha ekranda kalsın, sonra 1s fade-out
+      }
+    }).go();
+  }, 1000); // trims’in görünmesi için 1 saniye bekle
+};
 
 // Kiraz Yağmuru Fonksiyonu
 function cherryRain() {
