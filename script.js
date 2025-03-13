@@ -135,9 +135,9 @@ new TypeIt("#teks1", {
 	  " ",
     "iyi ki doğdunnnn iyi ki varsın hayatimmmm. yeni yaşın sana mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara vesile olsun💝",
 	" ",
-	"kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz. bunu çok içten bir şekilde söylüyorum cidden çok iyi bir insansın ben bana yansıttığın paylaştığın kısmına bayılıyorum.",
+	"kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz. bunu çok içten bir şekilde söylüyorum cidden çok iyi bir insansın bana yanstığın imajına bayılıyorummmm.",
 	" ",
-	  " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA!!!!"
+	  " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA 😁😁"
 	  ],
   startDelay: 2000,
   speed: 100,
@@ -148,7 +148,7 @@ new TypeIt("#teks2", {
   strings: [
     "sen benim için çok değerlisin bir o kadar özelsin, iyi ki tanıştık iyi ki varsınnnn 🥳🥳",
 	" ",
-	"her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan seninle vakit geçirmekten mutluluk duyacağım ❤",
+	"her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan seninle vakit geçirmekten sana destek olmaktan mutluluk duyacağım ❤",
 	" ",
     "tekrardan iyi ki doğdun iyi ki varsın kirazimmmmm 🍒🍒",
 	" ",
@@ -160,12 +160,15 @@ new TypeIt("#teks2", {
 }).go();
 
 new TypeIt("#trims", {
-  strings: ["iyi doğdun iyi ki varsın seni çok ama çokkk seviyorum nice mutlu yıllara <333"],
+  strings: ["iyi ki doğdun iyi ki varsın kirazımmm Seni çok ama çokkk seviyorum nice mutlu yıllara <333"],
   startDelay: 2000,
   speed: 75,
   loop: false,
   waitUntilVisible: true
-}).go();
+})
+.pause(5000)  // Yazı tamamlandıktan sonra 5 saniye bekle
+.go();
+
 
 // Kiraz Yağmuru Fonksiyonu
 function cherryRain() {
