@@ -40,6 +40,7 @@ const _slideSatu = function () {
 
   slideSatu.classList.remove('d-none');
   slideCake.classList.remove('d-none');
+  console.log("Slide Satu gösterildi");
 
   setTimeout(function () {
     cakeTap.classList.remove('d-none');
@@ -153,6 +154,7 @@ const _slideLima = function () {
   setTimeout(() => {
     trims.classList.remove('d-none');
     console.log("trims göründü");
+
     new TypeIt("#trims", {
       strings: ["İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333"],
       startDelay: 2000,
@@ -162,9 +164,11 @@ const _slideLima = function () {
         console.log("trims yazımı tamamlandı");
         trims.innerHTML = "İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333";
         instance.destroy();
+        console.log("Kapanma animasyonu başlıyor");
         slideLima.classList.add('animate__fadeOut');
         trims.classList.add('animate__fadeOut');
         setTimeout(() => {
+          console.log("Slide Lima kapanıyor, _slideFoto’ya geçiyor");
           trims.classList.add('d-none');
           slideLima.classList.add('d-none');
           slideLima.classList.remove('animate__fadeOut');
