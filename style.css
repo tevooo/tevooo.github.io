@@ -14,24 +14,25 @@ html {
   background-attachment: fixed;
   background-size: cover;
   background-color: #FEC0CD;
-  height: 100vh;
+  min-height: 120vh; /* Sayfayı uzatmak için minimum yükseklik */
   width: 100vw;
-  overflow: auto;
+  overflow-y: auto; /* İçerik taşarsa kaydırma çubuğu */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* İçeriği yukarıdan başlat */
   align-items: center;
+  padding-bottom: 20px; /* Alt kısımda boşluk */
 }
 
 /* Tüm slaytları kapsayan konteyner */
 .slide-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Yukarıdan başlasın */
   align-items: center;
   width: 100%;
-  max-width: 800px; /* Maksimum genişlik */
-  height: 100vh;
+  max-width: 800px;
+  min-height: 120vh; /* Sayfayı uzatmak için */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -40,19 +41,19 @@ html {
   width: 70vw;
   max-width: 350px;
   height: auto;
-  margin: 10px 0; /* Görseller arası boşluk */
+  margin: 15px 0; /* Görseller arası boşluğu artırdım */
 }
 
 #cakeTap, #tap, #trims {
   font-size: 16px;
-  margin: 10px 0;
+  margin: 15px 0; /* Butonlar arası boşluğu artırdım */
 }
 
 .foto {
   width: 80%;
   max-width: 400px;
   min-width: 300px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .paper {
@@ -61,7 +62,7 @@ html {
   max-width: 800px;
   height: 60vh;
   max-height: 540px;
-  margin: 10px 0;
+  margin: 15px 0;
   background: #fafafa;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
@@ -113,7 +114,7 @@ html {
   max-width: 550px;
   max-height: 350px;
   min-height: 100px;
-  margin: 10px 0;
+  margin: 15px 0;
   padding: 20px 0;
   background: #fafafa;
   border-radius: 10px;
@@ -126,12 +127,12 @@ html {
 }
 
 #slideLima {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .container {
   color: #333;
-  margin: 10px 0;
+  margin: 15px 0;
   padding: 0;
   text-align: center;
 }
@@ -152,8 +153,14 @@ li span {
 
 /* Mobil ayarlar */
 @media (max-width: 768px) {
+  .bg {
+    min-height: 130vh; /* Mobil için biraz daha uzun */
+  }
+  .slide-container {
+    min-height: 130vh;
+  }
   .img {
-    width: 60vw; /* Küçük ekranlar için */
+    width: 60vw;
   }
   #cakeTap, #tap, #trims {
     font-size: 14px;
@@ -173,12 +180,18 @@ li span {
   }
 }
 
-/* Daha küçük ekranlar için (telefonlar) */
+/* Daha küçük ekranlar için */
 @media (max-width: 480px) {
+  .bg {
+    min-height: 140vh; /* Çok küçük ekranlar için daha uzun */
+  }
+  .slide-container {
+    min-height: 140vh;
+  }
   .img {
     width: 50vw;
   }
   #slideFoto {
-    flex-direction: column; /* Fotoğrafları alt alta dizer */
+    flex-direction: column;
   }
 }
