@@ -15,7 +15,7 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('March 13, 2025 18:04:31').getTime(),
+let countDown = new Date('December 31, 2025 23:59:59').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -81,16 +81,22 @@ const _slideTiga = function () {
   const slideTiga = document.getElementById('slideTiga');
 
   slideTiga.classList.remove('d-none');
+  // Görünürlüğü garantilemek için ek kontrol
   setTimeout(function () {
-    tap.classList.remove('d-none');
-    document.body.addEventListener('click', function () {
-      slideTiga.classList.replace('animate__fadeInRight', 'animate__fadeOut');
-      tap.classList.add('d-none');
-      setTimeout(function () {
-        slideTiga.classList.add('d-none');
-        _slideLima();
-      }, 1000);
-    }, { once: true });
+    if (slideTiga.offsetParent !== null) { // Eleman görünür mü kontrolü
+      tap.classList.remove('d-none');
+      document.body.addEventListener('click', function () {
+        slideTiga.classList.replace('animate__fadeInRight', 'animate__fadeOut');
+        tap.classList.add('d-none');
+        setTimeout(function () {
+          slideTiga.classList.add('d-none');
+          _slideLima();
+        }, 1000);
+      }, { once: true });
+    } else {
+      console.error('slideTiga görünür değil!');
+      _slideLima(); // Hata durumunda bir sonraki adıma geç
+    }
   }, 5000);
 };
 
@@ -151,18 +157,20 @@ new TypeIt("#teks2", {
     "mutluuu yıllarrrrrrr 🎈🎂"
   ],
   startDelay: 1000,
-  speed: 85,
-  waitUntilVisible: true
+  speed: 75,
+  waitUntilVisible: true,
+  afterComplete: function (instance) {
+    console.log("teks2 yazımı tamamlandı"); // Hata ayıklama
+  }
 }).go();
 
 new TypeIt("#trims", {
-  strings: ["iyi doğdun iyi ki varsın seni çok seviyorum nice mutlu yıllara <333"],
-  startDelay: 1500,
-  speed: 75,
+  strings: ["Teşekkür ederim!"],
+  startDelay: 1000,
+  speed: 150,
   loop: false,
   waitUntilVisible: true
 }).go();
-
 
 // Kiraz Yağmuru
 function cherryRain() {
@@ -217,7 +225,7 @@ styleSheet.textContent = `
 `;
 document.head.appendChild(styleSheet);
 
-// Konfeti
+// Konfeti (değişiklik yok, önceki haliyle aynı)
 function confetti() {
   var $window = $(window),
     random = Math.random,
