@@ -52,11 +52,11 @@ html {
 #tap {
   position: fixed;
   bottom: 26px;
-  left: 50%;
+  left: 40%;
   transform: translateX(-20%);
   font-size: 16px;
   padding: 10px 20px;
-  background: #D44147;
+  background: #fa050f;
   color: white;
   border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
