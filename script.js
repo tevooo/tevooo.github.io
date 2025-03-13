@@ -15,7 +15,7 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('March 13, 2025 18:46:10').getTime(),
+let countDown = new Date('December 31, 2025 23:59:59').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -40,6 +40,7 @@ const _slideSatu = function () {
 
   slideSatu.classList.remove('d-none');
   slideCake.classList.remove('d-none');
+  console.log("Slide 1 gösterildi");
 
   setTimeout(function () {
     cakeTap.classList.remove('d-none');
@@ -62,6 +63,8 @@ const _slideDua = function () {
   const slideDua = document.getElementById('slideDua');
 
   slideDua.classList.remove('d-none');
+  console.log("Slide Dua gösterildi");
+
   setTimeout(function () {
     tap.classList.remove('d-none');
     document.body.addEventListener('click', function () {
@@ -81,29 +84,34 @@ const _slideTiga = function () {
   const slideTiga = document.getElementById('slideTiga');
 
   slideTiga.classList.remove('d-none');
-  // Görünürlüğü garantilemek için ek kontrol
-  setTimeout(function () {
-    if (slideTiga.offsetParent !== null) { // Eleman görünür mü kontrolü
-      tap.classList.remove('d-none');
-      document.body.addEventListener('click', function () {
-        slideTiga.classList.replace('animate__fadeInRight', 'animate__fadeOut');
-        tap.classList.add('d-none');
-        setTimeout(function () {
-          slideTiga.classList.add('d-none');
-          _slideLima();
-        }, 1000);
-      }, { once: true });
+  console.log("Slide Tiga gösterildi, görünür mü:", slideTiga.offsetParent !== null);
+
+  // iOS için ek görünürlük garantisi
+  requestAnimationFrame(() => {
+    if (slideTiga.offsetParent !== null) {
+      setTimeout(function () {
+        tap.classList.remove('d-none');
+        document.body.addEventListener('click', function () {
+          slideTiga.classList.replace('animate__fadeInRight', 'animate__fadeOut');
+          tap.classList.add('d-none');
+          setTimeout(function () {
+            slideTiga.classList.add('d-none');
+            _slideLima();
+          }, 1000);
+        }, { once: true });
+      }, 500); // Kısa bir gecikme ile tap görünür
     } else {
-      console.error('slideTiga görünür değil!');
-      _slideLima(); // Hata durumunda bir sonraki adıma geç
+      console.error("Slide Tiga görünür değil, bir sonraki adıma geçiliyor");
+      _slideLima();
     }
-  }, 5000);
+  });
 };
 
 const _slideLima = function () {
   const slideLima = document.getElementById('slideLima');
   const trims = document.getElementById('trims');
   slideLima.classList.remove('d-none');
+  console.log("Slide Lima gösterildi");
 
   setTimeout(() => {
     trims.classList.remove('d-none');
@@ -124,7 +132,8 @@ const _slideLima = function () {
 const _slideFoto = function () {
   const slideFoto = document.getElementById('slideFoto');
   slideFoto.classList.remove('d-none');
-
+  console.log("Slide Foto gösterildi");
+  
   setTimeout(() => {
     cherryRain();
   }, 5000);
@@ -141,9 +150,12 @@ new TypeIt("#teks1", {
 	"kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz.",
 	" "
 	  ],
-  startDelay: 2000,
+  startDelay: 500,
   speed: 100,
-  waitUntilVisible: true
+  waitUntilVisible: true,
+  afterComplete: function () {
+    console.log("teks1 yazımı tamamlandı");
+  }
 }).go();
 
 new TypeIt("#teks2", {
@@ -156,23 +168,26 @@ new TypeIt("#teks2", {
 	" ",
     "mutluuu yıllarrrrrrr 🎈🎂"
   ],
-  startDelay: 1000,
+  startDelay: 0, // iOS’ta daha hızlı tetiklenmesi için
   speed: 75,
   waitUntilVisible: true,
-  afterComplete: function (instance) {
-    console.log("teks2 yazımı tamamlandı"); // Hata ayıklama
+  afterComplete: function () {
+    console.log("teks2 yazımı tamamlandı");
   }
 }).go();
 
 new TypeIt("#trims", {
-  strings: ["Teşekkür ederim!"],
-  startDelay: 1000,
+  strings: ["iyi doğdun iyi ki varsın seni çok seviyorum nice mutlu yıllara <333"],
+  startDelay: 500,
   speed: 150,
   loop: false,
-  waitUntilVisible: true
+  waitUntilVisible: true,
+  afterComplete: function () {
+    console.log("trims yazımı tamamlandı");
+  }
 }).go();
 
-// Kiraz Yağmuru
+// Kiraz Yağmuru ve Konfeti (değişiklik yok, önceki haliyle aynı)
 function cherryRain() {
   const cherryContainer = document.createElement('div');
   cherryContainer.style.position = 'fixed';
@@ -225,7 +240,6 @@ styleSheet.textContent = `
 `;
 document.head.appendChild(styleSheet);
 
-// Konfeti (değişiklik yok, önceki haliyle aynı)
 function confetti() {
   var $window = $(window),
     random = Math.random,
