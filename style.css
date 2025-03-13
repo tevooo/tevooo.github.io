@@ -38,7 +38,7 @@ html {
 }
 
 .img {
-  width: 70vw;
+  width: 50vw;
   max-width: 350px;
   height: auto;
   margin: 15px 0;
@@ -50,7 +50,7 @@ html {
 }
 
 .foto {
-  width: 80%;
+  width: 60%;
   max-width: 400px;
   min-width: 300px;
   margin: 15px 0;
@@ -59,11 +59,11 @@ html {
 /* Paper */
 .paper {
   font-family: 'Patrick Hand', cursive;
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 700px;
   height: 100vh; /* Defteri uzattım (önceki: 60vh) */
   max-height: 720px; /* Maksimum yüksekliği artırdım (önceki: 540px) */
-  margin: 15px 0;
+  margin: 11px 0;
   background: #fafafa;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
