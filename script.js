@@ -15,7 +15,7 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('March 01, 2025 23:59:59').getTime(),
+let countDown = new Date('March 13, 2025 18:04:31').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -157,7 +157,7 @@ new TypeIt("#teks2", {
 
 new TypeIt("#trims", {
   strings: ["iyi doğdun iyi ki varsın seni çok seviyorum nice mutlu yıllara <333"],
-  startDelay: 1100,
+  startDelay: 1500,
   speed: 75,
   loop: false,
   waitUntilVisible: true
