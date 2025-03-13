@@ -111,7 +111,7 @@ const _slideDua = function () {
         " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA 😁😁"
       ],
       startDelay: 2000,
-      speed: 25,
+      speed: 45,
       waitUntilVisible: true,
       afterComplete: function () {
         console.log("teks1 yazımı tamamlandı");
@@ -154,7 +154,7 @@ const _slideTiga = function () {
         "mutluuu yıllarrrrrrr jimjimemmmm 🎈🎂"
       ],
       startDelay: 1000,
-      speed: 45,
+      speed: 55,
       waitUntilVisible: true,
       afterComplete: function () {
         console.log("teks2 yazımı tamamlandı");
@@ -194,7 +194,7 @@ const _slideLima = function () {
 
     // TypeIt yerine manuel yazma
     trims.innerHTML = "";
-    const text = "İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333";
+    const text = "iyi ki doğdun, iyi ki varsınnnn Seni çok ama çok seviyorum nice mutlu yıllara <333";
     let index = 0;
     const speed = 75;
 
@@ -252,8 +252,8 @@ function cherryRain() {
   cherryContainer.style.zIndex = '9999';
   document.body.appendChild(cherryContainer);
 
-  const cherryCount = 1000;
-  const duration = 10000;
+  const cherryCount = 250;
+  const duration = 20000;
   const interval = duration / cherryCount;
 
   let cherriesDropped = 0;
@@ -263,10 +263,10 @@ function cherryRain() {
       const cherry = document.createElement('span');
       cherry.innerHTML = '🍒🍓🍊🍍';
       cherry.style.position = 'absolute';
-      cherry.style.fontSize = '26px';
+      cherry.style.fontSize = '16px';
       cherry.style.left = Math.random() * 100 + 'vw';
       cherry.style.top = '-50px';
-      cherry.style.animation = `fall ${Math.random() * 3 + 2}s linear`;
+      cherry.style.animation = `fall ${Math.random() * 4 + 2}s linear`;
       cherryContainer.appendChild(cherry);
 
       cherry.addEventListener('animationend', () => {
