@@ -9,11 +9,11 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/x-icon" href="./img/hbd.png">
-  <title>kirazımın doğum günüsü</title>
+  <title>Happy Birthday!</title>
   <style>
     /* Pasta için stil */
     #slideCake {
@@ -24,27 +24,61 @@
       z-index: 1000;
     }
     #slideCake img {
-      width: 225px;
+      width: 60vw; /* Mobil için %60 genişlik */
+      max-width: 300px; /* Maksimum 300px */
       height: auto;
     }
     #cakeTap {
       position: fixed;
-      bottom: 50%;
+      bottom: 10%;
       left: 50%;
-      transform: translateX(-20%);
+      transform: translateX(-50%);
       z-index: 1001;
+      font-size: 16px;
     }
     /* Fotoğraf için stil */
     #slideFoto {
       position: fixed;
-      top: 40%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
     #slideFoto img {
-      width: 310px; /* Fotoğraf boyutu - değiştirebilirsiniz */
+      width: 80vw; /* Mobil için %80 genişlik */
+      max-width: 400px; /* Maksimum 400px */
       height: auto;
+    }
+    /* hbd1.png için stil */
+    #slideSatu {
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
+    #slideSatu img {
+      width: 70vw; /* Mobil için %70 genişlik */
+      max-width: 350px; /* Maksimum 350px */
+      height: auto;
+      margin: 20px auto;
+    }
+    /* Mobil ayarlar */
+    @media (max-width: 768px) {
+      #slideCake img {
+        width: 50vw; /* Küçük ekranlar için daha küçük */
+      }
+      #slideFoto img {
+        width: 70vw; /* Küçük ekranlar için daha küçük */
+      }
+      #slideSatu img {
+        width: 60vw; /* Küçük ekranlar için daha küçük */
+      }
+      #cakeTap {
+        font-size: 14px; /* Mobil için yazı boyutunu küçült */
+      }
     }
   </style>
 </head>
@@ -54,24 +88,24 @@
 
   <div class="bg" id="content">
     <div class="container" id="timer">
-      <h5>KİRAZIMINNN YENİ YAŞINA <x id='name'></x> SONNN:</h5>
+      <h5>Countdown to <x id='name'></x> birthday :</h5>
       <ul>
-        <li><span id="days"></span>GÜN</li>
-        <li><span id="hours"></span>SAAT</li>
-        <li><span id="minutes"></span>DAKİKA</li>
-        <li><span id="seconds"></span>SANİYE</li>
+        <li><span id="days"></span>days</li>
+        <li><span id="hours"></span>Hours</li>
+        <li><span id="minutes"></span>Minutes</li>
+        <li><span id="seconds"></span>Seconds</li>
       </ul>
     </div>
 
     <div id="slideSatu" class="animate__animated animate__slideInDown animate__slow d-none">
-      <img src="./img/hbd1.png" class="img">
+      <img src="./img/hbd1.png" class="img" alt="Happy Birthday">
     </div>
 
     <div id="slideCake" class="d-none animate__animated animate__bounceIn">
       <img src="./img/cake.gif" class="img" alt="Doğum Günü Pastası">
     </div>
     <p id="cakeTap" class="d-none animate__animated animate__pulse text-muted animate__slow animate__repeat-3">
-      iyi ki doğdun kirazimmm muahhhhh (<333 ileri balim)
+      Devam etmek için dokun
     </p>
 
     <div id="slideDua" class="slides d-none paper animate__zoomInDown animate__animated animate__delay-2s animate__slow">
@@ -91,13 +125,13 @@
     </div>
     <p id="trims" class="text-muted d-none mt-2"></p>
 
-    <!-- Fotoğraf Slaytı - Birden fazla görsel için alan -->
     <div id="slideFoto" class="d-none animate__animated animate__fadeIn">
       <img src="./img/1.png" class="img" alt="Fotoğraf 1">
+      <img src="./img/2.png" class="img" alt="Fotoğraf 2">
     </div>
 
     <p id="tap" class="d-none animate__animated animate__pulse text-muted animate__slow animate__repeat-3">
-      ileri canikom
+      Ketuk untuk melanjutkan
     </p>
   </div>
 
