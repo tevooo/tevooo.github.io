@@ -129,7 +129,7 @@ const _slideFoto = function () {
 new TypeIt("#teks1", {
   strings: [
     "kirazimm balımmmm 🍒,",
-    "benimmm neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn, JİMJİMEMMMMM 💋",
+    "benimmm neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn, jimjimemmmm 💋",
 	" ",
     "iyi ki doğdunnnn iyi ki varsın hayatimmmm. yeni yaşın sana mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara vesile olsun💝",
 	" ",
@@ -147,7 +147,7 @@ new TypeIt("#teks2", {
 	" ",
 	"her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan mutluluk duyacağım ❤",
 	" ",
-    "tekrardan iyi doğdun iyi ki varsın kirazimmmmm🍒🍒",
+    "tekrardan iyi ki doğdun iyi ki varsın kirazimmmmm 🍒🍒",
 	" ",
     "mutluuu yıllarrrrrrr 🎈🎂"
   ],
@@ -158,7 +158,7 @@ new TypeIt("#teks2", {
 
 new TypeIt("#trims", {
   strings: ["iyi doğdun iyi ki varsın seni çok seviyorum nice mutlu yıllara <333"],
-  startDelay: 1010,
+  startDelay: 2000,
   speed: 75,
   loop: false,
   waitUntilVisible: true
