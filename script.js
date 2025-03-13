@@ -1,12 +1,41 @@
-// Müzik için fonksiyon
 function playMusic() {
   const music = document.getElementById('background-music');
-  music.play().catch(error => console.log("Müzik çalma hatası:", error));
+  if (music) {
+    music.loop = true;
+    music.play()
+      .then(() => {
+        console.log("Müzik başladı, süre:", music.duration, "saniye");
+      })
+      .catch(error => {
+        console.error("Müzik çalma hatası:", error);
+      });
+
+    music.addEventListener('ended', () => {
+      console.log("Müzik doğal olarak bitti (loop varsa bu çıkmaz).");
+    });
+    music.addEventListener('pause', () => {
+      console.log("Müzik duraklatıldı, mevcut zaman:", music.currentTime);
+    });
+    music.addEventListener('play', () => {
+      console.log("Müzik yeniden oynatılıyor, mevcut zaman:", music.currentTime);
+    });
+  } else {
+    console.error("background-music elementi bulunamadı!");
+  }
 }
+
+// Otomatik başlatmayı kaldır
 window.addEventListener('DOMContentLoaded', function() {
-  playMusic();
+  console.log("Sayfa yüklendi, kullanıcı tıklaması bekleniyor...");
 });
-document.body.addEventListener('click', playMusic, { once: true });
+
+// İlk tıklamada müzik başlasın
+document.body.addEventListener('click', function () {
+  const music = document.getElementById('background-music');
+  if (music && music.paused) {
+    playMusic();
+  }
+}, { once: true });
 
 const content = document.getElementById('content');
 const timer = document.getElementById('timer');
