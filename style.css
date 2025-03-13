@@ -34,7 +34,7 @@ html {
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  position: relative; /* slideFoto için mutlak pozisyonlama desteği */
+  position: relative;
 }
 
 .img {
@@ -69,6 +69,12 @@ html {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
   overflow: hidden;
   position: relative;
+  opacity: 0; /* İlk başta görünmez */
+  transition: opacity 0.5s ease; /* Görünürlük geçişi */
+}
+
+.paper:not(.d-none) {
+  opacity: 1; /* Göründüğünde opacity 1 */
 }
 
 .paper:before {
@@ -128,12 +134,12 @@ html {
 }
 
 #slideFoto {
-  position: absolute; /* Sayfanın ortasına sabitlemek için */
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Tam merkez */
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: row; /* Görseller yan yana */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -198,7 +204,7 @@ li span {
     font-size: 14px;
   }
   #slideFoto {
-    flex-direction: column; /* Mobilde alt alta */
+    flex-direction: column;
     top: 50%;
     transform: translate(-50%, -50%);
   }
