@@ -130,11 +130,14 @@ new TypeIt("#teks1", {
   strings: [
     "kirazimm balımmmm 🍒,",
     "benimmm neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn, jimjimemmmm 💋",
-	" ",
+	  " ",
+	  "en önemlisiii sevebildiğim değer verdiğim tek Zehra 🤭🤭",
+	  " ",
     "iyi ki doğdunnnn iyi ki varsın hayatimmmm. yeni yaşın sana mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara vesile olsun💝",
 	" ",
-	"kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz.",
-	" "
+	"kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz. bunu çok içten bir şekilde söylüyorum cidden çok iyi bir insansın ben bana yansıttığın paylaştığın kısmına bayılıyorum.",
+	" ",
+	  " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA!!!!"
 	  ],
   startDelay: 2000,
   speed: 100,
@@ -145,19 +148,19 @@ new TypeIt("#teks2", {
   strings: [
     "sen benim için çok değerlisin bir o kadar özelsin, iyi ki tanıştık iyi ki varsınnnn 🥳🥳",
 	" ",
-	"her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan mutluluk duyacağım ❤",
+	"her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan seninle vakit geçirmekten mutluluk duyacağım ❤",
 	" ",
     "tekrardan iyi ki doğdun iyi ki varsın kirazimmmmm 🍒🍒",
 	" ",
-    "mutluuu yıllarrrrrrr 🎈🎂"
+    "mutluuu yıllarrrrrrr jimjimemmmm 🎈🎂"
   ],
-  startDelay: 1000,
+  startDelay: 1000
   speed: 85,
   waitUntilVisible: true
 }).go();
 
 new TypeIt("#trims", {
-  strings: ["iyi doğdun iyi ki varsın seni çok seviyorum nice mutlu yıllara <333"],
+  strings: ["iyi doğdun iyi ki varsın seni çok ama çokkk seviyorum nice mutlu yıllara <333"],
   startDelay: 2000,
   speed: 75,
   loop: false,
