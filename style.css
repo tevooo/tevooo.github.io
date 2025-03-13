@@ -34,7 +34,7 @@ html {
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  position: relative; /* slideFoto için mutlak pozisyonlama desteği */
+  position: relative;
 }
 
 .img {
@@ -44,9 +44,38 @@ html {
   margin: 15px 0;
 }
 
-#cakeTap, #tap {
+#cakeTap {
   font-size: 16px;
   margin: 15px 0;
+}
+
+#tap {
+  position: fixed;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-20%);
+  font-size: 16px;
+  padding: 10px 20px;
+  background: #D44147;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid #FFFFFF; /* Ekstra */
+  z-index: 100000;
+  cursor: pointer;
+  visibility: visible !important;
+}
+
+#tap.d-none {
+  display: none !important;
+}
+
+#tap:not(.d-none) {
+  display: block !important;
+}
+
+#tap:hover {
+  background: #FF0000; /* Hover’da parlak kırmızı */
 }
 
 .foto {
@@ -128,25 +157,44 @@ html {
 }
 
 #slideFoto {
-  position: absolute; /* Sayfanın ortasına sabitlemek için */
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Tam merkez */
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: row; /* Görseller yan yana */
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 800px;
+  z-index: 10;
+}
+
+#slideFoto .img {
+  width: 70vw;
+  max-width: 350px;
+  height: auto;
+  margin: 10px;
 }
 
 #slideLima {
-  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+#slideLima .fas.fa-heart {
+  color: #D44147;
+  animation: heartbeat 1.5s infinite;
 }
 
 #trims {
-  font-size: 16px;
-  margin-top: 5vh;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
+  text-align: center;
+  max-width: 90%;
 }
 
 .container {
@@ -168,6 +216,12 @@ li {
 li span {
   display: block;
   font-size: 24px;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 /* Mobil ayarlar */
@@ -194,19 +248,20 @@ li span {
   .img {
     width: 60vw;
   }
-  #cakeTap, #tap, #trims {
+  #cakeTap {
     font-size: 14px;
   }
-  #slideFoto {
-    flex-direction: column; /* Mobilde alt alta */
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #slideLima {
-    margin-top: 8vh;
+  #tap {
+    font-size: 14px;
+    padding: 8px 16px;
+    bottom: 15px;
   }
   #trims {
-    margin-top: 4vh;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  #slideLima {
+    min-height: 40vh;
   }
   li {
     font-size: 14px;
@@ -240,14 +295,16 @@ li span {
   .img {
     width: 50vw;
   }
-  #slideFoto {
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #slideLima {
-    margin-top: 6vh;
+  #tap {
+    font-size: 12px;
+    padding: 6px 12px;
+    bottom: 10px;
   }
   #trims {
-    margin-top: 3vh;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  #slideLima {
+    min-height: 35vh;
   }
 }

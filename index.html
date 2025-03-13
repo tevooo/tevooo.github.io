@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/x-icon" href="./img/hbd.png">
   <title>kirazimin dogum günüsü</title>
 </head>
 
 <body>
-  <audio id="background-music" src="./music/monokrom.mp3" preload="auto"></audio>
+  <audio id="background-music" src="./music/monokrom.mp3" preload="auto" loop></audio>
 
   <div class="bg" id="content">
     <div class="container" id="timer">
-      <h5>  🎉KİRAZIMIN YENİ YAŞINA <x id='name'></x> SON:</h5>
+      <h5>🎉KİRAZIMIN YENİ YAŞINA <x id='name'></x> SON:</h5>
       <ul>
         <li><span id="days"></span>GÜN</li>
         <li><span id="hours"></span>SAAT</li>
@@ -38,31 +38,30 @@
       iyi ki doğdun kirazimmm muahhhhh (<333 ileri balim)
     </p>
 
-      <div id="slideDua" class="slides d-none paper animate__zoomInDown animate__animated animate__delay-2s animate__slow">
-        <div class="paper-content">
-          <p id="teks1" class="teks"></p>
-        </div>
+    <div id="slideDua" class="slides d-none paper animate__zoomInDown animate__animated animate__delay-2s animate__slow">
+      <div class="paper-content">
+        <p id="teks1" class="teks"></p>
       </div>
-
-      <div id="slideTiga" class="slides d-none paper animate__fadeInRight animate__animated">
-        <div class="paper-content">
-          <p id="teks2" class="teks"></p>
-        </div>
-      </div>
-
-      <div id="slideLima" class="d-none animate__bounceIn animate__animated animate__slow">
-        <i class="fas fa-heart fa-5x text-danger"></i>
-      </div>
-      <p id="trims" class="text-muted d-none mt-2"></p>
-
-      <div id="slideFoto" class="d-none animate__animated animate__fadeIn">
-        <img src="./img/1.png" class="img" alt="Fotoğraf 1">
-      </div>
-
-      <p id="tap" class="d-none animate__animated animate__pulse text-muted animate__slow animate__repeat-3">
-        ileri canim
-      </p>
     </div>
+
+    <div id="slideTiga" class="slides d-none paper animate__fadeInRight animate__animated">
+      <div class="paper-content">
+        <p id="teks2" class="teks"></p>
+      </div>
+    </div>
+
+    <div id="slideLima" class="d-none animate__bounceIn animate__animated animate__slow">
+      <i class="fas fa-heart fa-5x text-danger"></i>
+      <p id="trims" class="text-muted d-none mt-2"></p>
+    </div>
+
+    <div id="slideFoto" class="d-none animate__animated animate__fadeIn">
+      <img src="./img/1.png" class="img" alt="Fotoğraf 1">
+    </div>
+
+    <p id="tap" class="d-none animate__animated animate__pulse text-muted animate__slow animate__repeat-3">
+      ileri canim
+    </p>
   </div>
 
   <footer class="page-footer font-small blue fixed-bottom"></footer>
@@ -72,7 +71,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/61e5120832.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
   <script src="https://momentjs.com/downloads/moment.js"></script>
   <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
   <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
