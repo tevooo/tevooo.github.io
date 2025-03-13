@@ -5,7 +5,6 @@ html {
   text-align: center;
   margin: 0;
   padding: 0;
-  -webkit-overflow-scrolling: touch; /* iOS için kaydırma */
 }
 
 .bg {
@@ -35,7 +34,6 @@ html {
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  position: relative;
 }
 
 .img {
@@ -45,7 +43,7 @@ html {
   margin: 15px 0;
 }
 
-#cakeTap, #tap {
+#cakeTap, #tap, #trims {
   font-size: 16px;
   margin: 15px 0;
 }
@@ -70,7 +68,6 @@ html {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
   overflow: hidden;
   position: relative;
-  /* Opacity ve visibility kaldırıldı, sadece display ile çalışıyoruz */
 }
 
 .paper:before {
@@ -93,14 +90,14 @@ html {
   bottom: 30px;
   left: 50px;
   background: linear-gradient(transparent, transparent 28px, #91D1D3 28px);
-  background-size: 30px 30px;
+  background-size: 30px 30px; /* Çizgi aralığı */
 }
 
 .paper-content .teks {
   text-align: left;
   width: 100%;
   height: 100%;
-  line-height: 30px;
+  line-height: 30px; /* Çizgi aralığı ile uyumlu */
   padding: 0 10px;
   border: 0;
   outline: 0;
@@ -130,12 +127,12 @@ html {
 }
 
 #slideFoto {
-  position: absolute;
+  position: absolute; /* Sayfanın ortasına sabitlemek için */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Tam merkez */
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Görseller yan yana */
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -143,12 +140,7 @@ html {
 }
 
 #slideLima {
-  margin-top: 10vh;
-}
-
-#trims {
-  font-size: 16px;
-  margin-top: 5vh;
+  margin: 15px 0;
 }
 
 .container {
@@ -179,36 +171,25 @@ li span {
     max-height: 600px;
   }
   .paper-content {
-    background-size: 25px 25px;
-    top: 25px;
+    background-size: 25px 25px; /* Mobil için çizgi aralığını küçülttüm */
+    top: 25px; /* Üst boşluğu azalttım */
     bottom: 25px;
-    left: 45px;
+    left: 45px; /* Sol boşluğu biraz azalttım */
   }
   .paper-content .teks {
-    font-size: 16px;
-    line-height: 25px;
-    padding: 0 8px;
+    font-size: 16px; /* Yazı boyutunu küçülttüm */
+    line-height: 25px; /* Çizgi aralığı ile uyumlu */
+    padding: 0 8px; /* Padding’i azalttım */
   }
   .paper:before {
-    width: 40px;
-    background-size: 25px 25px;
+    width: 40px; /* Sol kenar çubuğunu küçülttüm */
+    background-size: 25px 25px; /* Çizgi aralığını uyumlu hale getirdim */
   }
   .img {
     width: 60vw;
- GRADE
+  }
   #cakeTap, #tap, #trims {
     font-size: 14px;
-  }
-  #slideFoto {
-    flex-direction: column;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #slideLima {
-    margin-top: 8vh;
-  }
-  #trims {
-    margin-top: 4vh;
   }
   li {
     font-size: 14px;
@@ -225,14 +206,14 @@ li span {
     max-height: 500px;
   }
   .paper-content {
-    background-size: 20px 20px;
+    background-size: 20px 20px; /* Daha küçük ekranlar için daha küçük çizgiler */
     top: 20px;
     bottom: 20px;
     left: 40px;
   }
   .paper-content .teks {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 14px; /* Daha küçük font */
+    line-height: 20px; /* Çizgi aralığı ile uyumlu */
     padding: 0 6px;
   }
   .paper:before {
@@ -243,13 +224,6 @@ li span {
     width: 50vw;
   }
   #slideFoto {
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #slideLima {
-    margin-top: 6vh;
-  }
-  #trims {
-    margin-top: 3vh;
+    flex-direction: column;
   }
 }
