@@ -60,104 +60,88 @@ const _slideSatu = function () {
 const _slideDua = function () {
   const tap = document.getElementById('tap');
   const slideDua = document.getElementById('slideDua');
+  const teks1 = document.getElementById('teks1');
 
   slideDua.classList.remove('d-none');
-  setTimeout(function () {
-    tap.classList.remove('d-none');
-    document.body.addEventListener('click', function () {
-      slideDua.classList.replace('animate__zoomInDown', 'animate__fadeOutLeft');
-      slideDua.classList.remove('animate__delay-2s', 'animate__slow');
-      tap.classList.add('d-none');
-      setTimeout(function () {
-        slideDua.classList.add('d-none');
-        _slideTiga();
-      }, 1000);
-    }, { once: true });
-  }, 5000);
+  console.log("Slide Dua gösterildi");
+
+  setTimeout(() => {
+    teks1.classList.remove('d-none');
+    console.log("teks1 göründü");
+    new TypeIt("#teks1", {
+      strings: [
+        "kirazimm balımmmm 🍒,",
+        "benimmm neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn, jimjimemmmm 💋",
+        " ",
+        "en önemlisiii sevebildiğim değer verdiğim tek Zehra 🤭🤭",
+        " ",
+        "iyi ki doğdunnnn iyi ki varsın hayatimmmm. yeni yaşın sana mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara vesile olsun💝",
+        " ",
+        "kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz. bunu çok içten bir şekilde söylüyorum cidden çok iyi bir insansın bana yanstığın imajına bayılıyorummmm.",
+        " ",
+        " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA 😁😁"
+      ],
+      startDelay: 2000,
+      speed: 100,
+      waitUntilVisible: true,
+      afterComplete: function () {
+        console.log("teks1 yazımı tamamlandı");
+        tap.classList.remove('d-none');
+        document.body.addEventListener('click', function () {
+          slideDua.classList.replace('animate__zoomInDown', 'animate__fadeOutLeft');
+          slideDua.classList.remove('animate__delay-2s', 'animate__slow');
+          tap.classList.add('d-none');
+          setTimeout(function () {
+            slideDua.classList.add('d-none');
+            teks1.classList.add('d-none');
+            _slideTiga();
+          }, 1000);
+        }, { once: true });
+      }
+    }).go();
+  }, 1000);
 };
 
 const _slideTiga = function () {
   const tap = document.getElementById('tap');
   const slideTiga = document.getElementById('slideTiga');
+  const teks2 = document.getElementById('teks2');
 
   slideTiga.classList.remove('d-none');
-  setTimeout(function () {
-    tap.classList.remove('d-none');
-    document.body.addEventListener('click', function () {
-      slideTiga.classList.replace('animate__fadeInRight', 'animate__fadeOut');
-      tap.classList.add('d-none');
-      setTimeout(function () {
-        slideTiga.classList.add('d-none');
-        _slideLima();
-      }, 1000);
-    }, { once: true });
-  }, 5000);
-};
-
-const _slideLima = function () {
-  const slideLima = document.getElementById('slideLima');
-  const trims = document.getElementById('trims');
-  slideLima.classList.remove('d-none');
+  console.log("Slide Tiga gösterildi");
 
   setTimeout(() => {
-    trims.classList.remove('d-none');
+    teks2.classList.remove('d-none');
+    console.log("teks2 göründü");
+    new TypeIt("#teks2", {
+      strings: [
+        "sen benim için çok değerlisin bir o kadar özelsin, iyi ki tanıştık iyi ki varsınnnn 🥳🥳",
+        " ",
+        "her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan seninle vakit geçirmekten sana destek olmaktan mutluluk duyacağım ❤",
+        " ",
+        "tekrardan iyi ki doğdun iyi ki varsın kirazimmmmm 🍒🍒",
+        " ",
+        "mutluuu yıllarrrrrrr jimjimemmmm 🎈🎂"
+      ],
+      startDelay: 1000,
+      speed: 85,
+      waitUntilVisible: true,
+      afterComplete: function () {
+        console.log("teks2 yazımı tamamlandı");
+        tap.classList.remove('d-none');
+        document.body.addEventListener('click', function () {
+          slideTiga.classList.replace('animate__fadeInRight', 'animate__fadeOut');
+          tap.classList.add('d-none');
+          setTimeout(function () {
+            slideTiga.classList.add('d-none');
+            teks2.classList.add('d-none');
+            _slideLima();
+          }, 1000);
+        }, { once: true });
+      }
+    }).go();
   }, 1000);
-
-  slideLima.addEventListener('animationend', () => {
-    slideLima.classList.add('animate__delay-3s');
-    slideLima.classList.replace('animate__bounceIn', 'animate__fadeOut');
-    trims.classList.add('animate__animated', 'animate__fadeOut', 'animate__delay-3s');
-    setTimeout(() => {
-      trims.classList.add('d-none');
-      slideLima.classList.add('d-none');
-      _slideFoto();
-    }, 4000);
-  }, { once: true });
 };
-
-// Fotoğraf Slaytı ve Kiraz Yağmuru
-const _slideFoto = function () {
-  const slideFoto = document.getElementById('slideFoto');
-  slideFoto.classList.remove('d-none');
-
-  setTimeout(() => {
-    cherryRain(); // 5 saniye sonra kiraz yağmuru
-  }, 5000);
-};
-
-// Özelleştirilmiş metinler
-new TypeIt("#teks1", {
-  strings: [
-    "kirazimm balımmmm 🍒,",
-    "benimmm neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn, jimjimemmmm 💋",
-	  " ",
-	  "en önemlisiii sevebildiğim değer verdiğim tek Zehra 🤭🤭",
-	  " ",
-    "iyi ki doğdunnnn iyi ki varsın hayatimmmm. yeni yaşın sana mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara vesile olsun💝",
-	" ",
-	"kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz. bunu çok içten bir şekilde söylüyorum cidden çok iyi bir insansın bana yanstığın imajına bayılıyorummmm.",
-	" ",
-	  " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA 😁😁"
-	  ],
-  startDelay: 2000,
-  speed: 100,
-  waitUntilVisible: true
-}).go();
-
-new TypeIt("#teks2", {
-  strings: [
-    "sen benim için çok değerlisin bir o kadar özelsin, iyi ki tanıştık iyi ki varsınnnn 🥳🥳",
-	" ",
-	"her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan seninle vakit geçirmekten sana destek olmaktan mutluluk duyacağım ❤",
-	" ",
-    "tekrardan iyi ki doğdun iyi ki varsın kirazimmmmm 🍒🍒",
-	" ",
-    "mutluuu yıllarrrrrrr jimjimemmmm 🎈🎂"
-  ],
-  startDelay: 1000,
-  speed: 85,
-  waitUntilVisible: true
-}).go();
 
 const _slideLima = function () {
   const slideLima = document.getElementById('slideLima');
@@ -169,7 +153,6 @@ const _slideLima = function () {
   setTimeout(() => {
     trims.classList.remove('d-none');
     console.log("trims göründü");
-
     new TypeIt("#trims", {
       strings: ["İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333"],
       startDelay: 2000,
@@ -178,8 +161,7 @@ const _slideLima = function () {
       afterComplete: function (instance) {
         console.log("trims yazımı tamamlandı");
         trims.innerHTML = "İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333";
-        instance.destroy(); // Animasyonu durdur, yazıyı sabitle
-        // Kapanma animasyonunu başlat
+        instance.destroy();
         slideLima.classList.add('animate__fadeOut');
         trims.classList.add('animate__fadeOut');
         setTimeout(() => {
@@ -188,10 +170,20 @@ const _slideLima = function () {
           slideLima.classList.remove('animate__fadeOut');
           trims.classList.remove('animate__fadeOut');
           _slideFoto();
-        }, 2000); // Yazı tamamlandıktan sonra 2 saniye daha ekranda kalsın, sonra 1s fade-out
+        }, 2000);
       }
     }).go();
-  }, 1000); // trims’in görünmesi için 1 saniye bekle
+  }, 1000);
+};
+
+const _slideFoto = function () {
+  const slideFoto = document.getElementById('slideFoto');
+  slideFoto.classList.remove('d-none');
+  console.log("Slide Foto gösterildi");
+
+  setTimeout(() => {
+    cherryRain();
+  }, 5000);
 };
 
 // Kiraz Yağmuru Fonksiyonu
@@ -202,46 +194,42 @@ function cherryRain() {
   cherryContainer.style.left = '0';
   cherryContainer.style.width = '100vw';
   cherryContainer.style.height = '100vh';
-  cherryContainer.style.pointerEvents = 'none'; // Tıklamaları engellemez
+  cherryContainer.style.pointerEvents = 'none';
   cherryContainer.style.zIndex = '9999';
   document.body.appendChild(cherryContainer);
 
-  const cherryCount = 1000; // Toplam kiraz sayısı
-  const duration = 10000; // Toplam süre (5 saniye)
-  const interval = duration / cherryCount; // Her kiraz arasındaki zaman aralığı (ms)
+  const cherryCount = 1000;
+  const duration = 10000;
+  const interval = duration / cherryCount;
 
   let cherriesDropped = 0;
 
-  // Kirazları aralıklı düşürmek için zamanlayıcı
   const dropCherry = setInterval(() => {
     if (cherriesDropped < cherryCount) {
       const cherry = document.createElement('span');
       cherry.innerHTML = '🍒';
       cherry.style.position = 'absolute';
-      cherry.style.fontSize = '26px'; // Kiraz boyutu
-      cherry.style.left = Math.random() * 100 + 'vw'; // Rastgele yatay başlangıç
-      cherry.style.top = '-50px'; // Ekranın üstünden başlar
-      cherry.style.animation = `fall ${Math.random() * 3 + 2}s linear`; // 2-5 saniye düşme
+      cherry.style.fontSize = '26px';
+      cherry.style.left = Math.random() * 100 + 'vw';
+      cherry.style.top = '-50px';
+      cherry.style.animation = `fall ${Math.random() * 3 + 2}s linear`;
       cherryContainer.appendChild(cherry);
 
-      // Animasyon bittiğinde kirazı kaldır
       cherry.addEventListener('animationend', () => {
         cherry.remove();
       });
 
       cherriesDropped++;
     } else {
-      clearInterval(dropCherry); // Tüm kirazlar düştüğünde zamanlayıcıyı durdur
+      clearInterval(dropCherry);
     }
-  }, interval); // Her kiraz için aralık (örneğin 100ms)
+  }, interval);
 
-  // 5 saniye sonra container’ı kaldır
   setTimeout(() => {
     cherryContainer.remove();
   }, duration);
 }
 
-// Kiraz düşme animasyonu için CSS (JavaScript içinde ekliyoruz)
 const styleSheet = document.createElement('style');
 styleSheet.textContent = `
   @keyframes fall {
@@ -283,11 +271,10 @@ function confetti() {
     dThetaMin = .4,
     dThetaMax = .7 - dThetaMin;
 
-  // Rastgele renk üreten fonksiyon
   function randomColor() {
-    var r = Math.floor(Math.random() * 256); // 0-255 arası rastgele kırmızı
-    var g = Math.floor(Math.random() * 256); // 0-255 arası rastgele yeşil
-    var b = Math.floor(Math.random() * 256); // 0-255 arası rastgele mavi
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
     return 'rgb(' + r + ',' + g + ',' + b + ')';
   }
 
@@ -340,7 +327,7 @@ function confetti() {
   container.style.overflow = 'visible';
   container.style.zIndex = '9999';
 
-  function Confetto() { // Tema parametresini kaldırdık
+  function Confetto() {
     this.frame = 0;
     this.outer = document.createElement('div');
     this.inner = document.createElement('div');
@@ -353,7 +340,7 @@ function confetti() {
     outerStyle.height = (sizeMin + sizeMax * random()) + 'px';
     innerStyle.width = '100%';
     innerStyle.height = '100%';
-    innerStyle.backgroundColor = randomColor(); // Her konfeti için rastgele renk
+    innerStyle.backgroundColor = randomColor();
 
     outerStyle.perspective = '50px';
     outerStyle.transform = 'rotate(' + (360 * random()) + 'deg)';
@@ -409,7 +396,7 @@ function confetti() {
 
       (function addConfetto() {
         if (isRunning && count++ < particles) {
-          var confetto = new Confetto(); // Tema olmadan direkt rastgele renk
+          var confetto = new Confetto();
           confetti.push(confetto);
           container.appendChild(confetto.outer);
           timer = setTimeout(addConfetto, spread * random());
