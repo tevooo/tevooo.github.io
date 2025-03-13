@@ -15,7 +15,7 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('March 13, 2025 19:48:20').getTime(),
+let countDown = new Date('March 01, 2025 23:59:59').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -40,7 +40,6 @@ const _slideSatu = function () {
 
   slideSatu.classList.remove('d-none');
   slideCake.classList.remove('d-none');
-  console.log("Slide 1 gösterildi");
 
   setTimeout(function () {
     cakeTap.classList.remove('d-none');
@@ -63,8 +62,6 @@ const _slideDua = function () {
   const slideDua = document.getElementById('slideDua');
 
   slideDua.classList.remove('d-none');
-  console.log("Slide Dua gösterildi");
-
   setTimeout(function () {
     tap.classList.remove('d-none');
     document.body.addEventListener('click', function () {
@@ -84,34 +81,23 @@ const _slideTiga = function () {
   const slideTiga = document.getElementById('slideTiga');
 
   slideTiga.classList.remove('d-none');
-  console.log("Slide Tiga gösterildi, görünür mü:", slideTiga.offsetParent !== null);
-
-  // iOS için ek görünürlük garantisi
-  requestAnimationFrame(() => {
-    if (slideTiga.offsetParent !== null) {
+  setTimeout(function () {
+    tap.classList.remove('d-none');
+    document.body.addEventListener('click', function () {
+      slideTiga.classList.replace('animate__fadeInRight', 'animate__fadeOut');
+      tap.classList.add('d-none');
       setTimeout(function () {
-        tap.classList.remove('d-none');
-        document.body.addEventListener('click', function () {
-          slideTiga.classList.replace('animate__fadeInRight', 'animate__fadeOut');
-          tap.classList.add('d-none');
-          setTimeout(function () {
-            slideTiga.classList.add('d-none');
-            _slideLima();
-          }, 1000);
-        }, { once: true });
-      }, 500); // Kısa bir gecikme ile tap görünür
-    } else {
-      console.error("Slide Tiga görünür değil, bir sonraki adıma geçiliyor");
-      _slideLima();
-    }
-  });
+        slideTiga.classList.add('d-none');
+        _slideLima();
+      }, 1000);
+    }, { once: true });
+  }, 5000);
 };
 
 const _slideLima = function () {
   const slideLima = document.getElementById('slideLima');
   const trims = document.getElementById('trims');
   slideLima.classList.remove('d-none');
-  console.log("Slide Lima gösterildi");
 
   setTimeout(() => {
     trims.classList.remove('d-none');
@@ -132,8 +118,7 @@ const _slideLima = function () {
 const _slideFoto = function () {
   const slideFoto = document.getElementById('slideFoto');
   slideFoto.classList.remove('d-none');
-  console.log("Slide Foto gösterildi");
-  
+
   setTimeout(() => {
     cherryRain();
   }, 5000);
@@ -142,52 +127,35 @@ const _slideFoto = function () {
 // Özelleştirilmiş metinler
 new TypeIt("#teks1", {
   strings: [
-    "kirazimm balımmmm 🍒,",
-    "benimmm neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn, jimjimemmm 💋",
-	" ",
-    "iyi ki doğdunnnn iyi ki varsın hayatimmmm. yeni yaşın sana mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara vesile olsun💝",
-	" ",
-	"kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz.",
-	" "
-	  ],
-  startDelay: 500,
+    "Sevgili arkadaşım,",
+    "Yeni yaşın sana mutluluk ve sağlık getirsin!",
+    "Her zaman yanındayım."
+  ],
+  startDelay: 2000,
   speed: 100,
-  waitUntilVisible: true,
-  afterComplete: function () {
-    console.log("teks1 yazımı tamamlandı");
-  }
+  waitUntilVisible: true
 }).go();
 
 new TypeIt("#teks2", {
   strings: [
-    "sen benim için çok değerlisin bir o kadar özelsin, iyi ki tanıştık iyi ki varsınnnn 🥳🥳",
-	" ",
-	"her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan mutluluk duyacağım ❤",
-	" ",
-    "tekrardan iyi doğdun iyi ki varsın kirazimmmmm🍒🍒",
-	" ",
-    "mutluuu yıllarrrrrrr 🎈🎂"
+    "Doğum günün kutlu olsun!",
+    "Sana en güzel dileklerimi sunuyorum.",
+    "- Mutlu yıllar!"
   ],
-  startDelay: 0, // iOS’ta daha hızlı tetiklenmesi için
+  startDelay: 1000,
   speed: 75,
-  waitUntilVisible: true,
-  afterComplete: function () {
-    console.log("teks2 yazımı tamamlandı");
-  }
+  waitUntilVisible: true
 }).go();
 
 new TypeIt("#trims", {
-  strings: ["iyi doğdun iyi ki varsın seni çok seviyorum nice mutlu yıllara <333"],
-  startDelay: 500,
+  strings: ["Teşekkür ederim!"],
+  startDelay: 1000,
   speed: 150,
   loop: false,
-  waitUntilVisible: true,
-  afterComplete: function () {
-    console.log("trims yazımı tamamlandı");
-  }
+  waitUntilVisible: true
 }).go();
 
-// Kiraz Yağmuru ve Konfeti (değişiklik yok, önceki haliyle aynı)
+// Kiraz Yağmuru
 function cherryRain() {
   const cherryContainer = document.createElement('div');
   cherryContainer.style.position = 'fixed';
@@ -240,6 +208,7 @@ styleSheet.textContent = `
 `;
 document.head.appendChild(styleSheet);
 
+// Konfeti
 function confetti() {
   var $window = $(window),
     random = Math.random,
