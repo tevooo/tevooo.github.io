@@ -126,19 +126,6 @@ html {
   border-radius: 40px;
 }
 
-#slideFoto {
-  position: absolute; /* Sayfanın ortasına sabitlemek için */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Tam merkez */
-  display: flex;
-  flex-direction: row; /* Görseller yan yana */
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 800px;
-}
-
 #slideLima {
   margin: 15px 0;
 }
