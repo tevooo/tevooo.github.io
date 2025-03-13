@@ -34,6 +34,7 @@ html {
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
+  position: relative; /* slideFoto için mutlak pozisyonlama desteği */
 }
 
 .img {
@@ -127,16 +128,25 @@ html {
 }
 
 #slideFoto {
-  margin-top: 10vh; /* 1.png ve 2.png’yi aşağı kaydırır */
+  position: absolute; /* Sayfanın ortasına sabitlemek için */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Tam merkez */
+  display: flex;
+  flex-direction: row; /* Görseller yan yana */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
 }
 
 #slideLima {
-  margin-top: 10vh; /* Kalbi aşağı kaydırır */
+  margin-top: 10vh;
 }
 
 #trims {
   font-size: 16px;
-  margin-top: 5vh; /* Teşekkür yazısını kalpten biraz aşağı kaydırır */
+  margin-top: 5vh;
 }
 
 .container {
@@ -188,7 +198,9 @@ li span {
     font-size: 14px;
   }
   #slideFoto {
-    margin-top: 8vh; /* Mobil için biraz daha az */
+    flex-direction: column; /* Mobilde alt alta */
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   #slideLima {
     margin-top: 8vh;
@@ -229,8 +241,8 @@ li span {
     width: 50vw;
   }
   #slideFoto {
-    flex-direction: column;
-    margin-top: 6vh; /* Daha küçük ekranlar için */
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   #slideLima {
     margin-top: 6vh;
