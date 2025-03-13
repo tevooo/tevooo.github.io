@@ -1,12 +1,40 @@
 // Müzik için fonksiyon
 function playMusic() {
   const music = document.getElementById('background-music');
-  music.play().catch(error => console.log("Müzik çalma hatası:", error));
+  if (music) {
+    music.play()
+      .then(() => {
+        console.log("Müzik başladı, süre:", music.duration, "saniye");
+      })
+      .catch(error => {
+        console.error("Müzik çalma hatası:", error);
+      });
+
+    music.addEventListener('ended', () => {
+      console.log("Müzik doğal olarak bitti.");
+    });
+    music.addEventListener('pause', () => {
+      console.log("Müzik duraklatıldı, mevcut zaman:", music.currentTime);
+    });
+    music.addEventListener('play', () => {
+      console.log("Müzik yeniden oynatılıyor, mevcut zaman:", music.currentTime);
+    });
+  } else {
+    console.error("background-music elementi bulunamadı!");
+  }
 }
+
 window.addEventListener('DOMContentLoaded', function() {
+  console.log("Sayfa yüklendi, müzik denemesi yapılıyor...");
   playMusic();
 });
-document.body.addEventListener('click', playMusic, { once: true });
+
+document.body.addEventListener('click', function () {
+  const music = document.getElementById('background-music');
+  if (music && music.paused) {
+    playMusic();
+  }
+}, { once: true });
 
 const content = document.getElementById('content');
 const timer = document.getElementById('timer');
@@ -157,7 +185,7 @@ const _slideLima = function () {
 
     new TypeIt("#trims", {
       strings: ["İyi doğdun, iyi ki varsın! Seni çok ama çok seviyorum. Nice mutlu yıllara <333"],
-      startDelay: 2000,
+      startDelay: 1000,
       speed: 75,
       waitUntilVisible: true,
       afterComplete: function (instance) {
@@ -167,14 +195,14 @@ const _slideLima = function () {
         console.log("Kapanma animasyonu başlıyor");
         slideLima.classList.add('animate__fadeOut');
         trims.classList.add('animate__fadeOut');
-        setTimeout(() => {
+        slideLima.addEventListener('animationend', function () {
           console.log("Slide Lima kapanıyor, _slideFoto’ya geçiyor");
           trims.classList.add('d-none');
           slideLima.classList.add('d-none');
           slideLima.classList.remove('animate__fadeOut');
           trims.classList.remove('animate__fadeOut');
           _slideFoto();
-        }, 2000);
+        }, { once: true });
       }
     }).go();
   }, 1000);
