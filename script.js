@@ -157,20 +157,12 @@ new TypeIt("#teks2", {
 
 new TypeIt("#trims", {
   strings: ["iyi doğdun iyi ki varsın seni çok seviyorum nice mutlu yıllara <333"],
-  startDelay: 1010,
+  startDelay: 1100,
   speed: 75,
   loop: false,
   waitUntilVisible: true
 }).go();
 
-
-new TypeIt("#trims", {
-  strings: ["Teşekkür ederim!"],
-  startDelay: 1000,
-  speed: 150,
-  loop: false,
-  waitUntilVisible: true
-}).go();
 
 // Kiraz Yağmuru
 function cherryRain() {
