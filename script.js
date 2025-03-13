@@ -15,7 +15,7 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('March 01, 2025 23:59:59').getTime(),
+let countDown = new Date('March 13, 2025 16:03:35').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -115,22 +115,27 @@ const _slideLima = function () {
   }, { once: true });
 };
 
+// Fotoğraf Slaytı ve Kiraz Yağmuru
 const _slideFoto = function () {
   const slideFoto = document.getElementById('slideFoto');
   slideFoto.classList.remove('d-none');
 
   setTimeout(() => {
-    cherryRain();
+    cherryRain(); // 5 saniye sonra kiraz yağmuru
   }, 5000);
 };
 
 // Özelleştirilmiş metinler
 new TypeIt("#teks1", {
   strings: [
-    "Sevgili arkadaşım,",
-    "Yeni yaşın sana mutluluk ve sağlık getirsin!",
-    "Her zaman yanındayım."
-  ],
+    "kirazimm balımmmm 🍒,",
+    "benimmm neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn, JİMJİMEMMMMM 💋",
+	" ",
+    "iyi ki doğdunnnn iyi ki varsın hayatimmmm. yeni yaşın sana mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara vesile olsun💝",
+	" ",
+	"kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz.",
+	" "
+	  ],
   startDelay: 2000,
   speed: 100,
   waitUntilVisible: true
@@ -138,24 +143,28 @@ new TypeIt("#teks1", {
 
 new TypeIt("#teks2", {
   strings: [
-    "Doğum günün kutlu olsun!",
-    "Sana en güzel dileklerimi sunuyorum.",
-    "- Mutlu yıllar!"
+    "sen benim için çok değerlisin bir o kadar özelsin, iyi ki tanıştık iyi ki varsınnnn 🥳🥳",
+	" ",
+	"her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan mutluluk duyacağım ❤",
+	" ",
+    "tekrardan iyi doğdun iyi ki varsın kirazimmmmm🍒🍒",
+	" ",
+    "mutluuu yıllarrrrrrr 🎈🎂"
   ],
   startDelay: 1000,
-  speed: 75,
+  speed: 85,
   waitUntilVisible: true
 }).go();
 
 new TypeIt("#trims", {
-  strings: ["Teşekkür ederim!"],
-  startDelay: 1000,
-  speed: 150,
+  strings: ["iyi doğdun iyi ki varsın seni çok seviyorum nice mutlu yıllara <333"],
+  startDelay: 1010,
+  speed: 75,
   loop: false,
   waitUntilVisible: true
 }).go();
 
-// Kiraz Yağmuru
+// Kiraz Yağmuru Fonksiyonu
 function cherryRain() {
   const cherryContainer = document.createElement('div');
   cherryContainer.style.position = 'fixed';
@@ -163,42 +172,46 @@ function cherryRain() {
   cherryContainer.style.left = '0';
   cherryContainer.style.width = '100vw';
   cherryContainer.style.height = '100vh';
-  cherryContainer.style.pointerEvents = 'none';
+  cherryContainer.style.pointerEvents = 'none'; // Tıklamaları engellemez
   cherryContainer.style.zIndex = '9999';
   document.body.appendChild(cherryContainer);
 
-  const cherryCount = 50;
-  const duration = 5000;
-  const interval = duration / cherryCount;
+  const cherryCount = 1000; // Toplam kiraz sayısı
+  const duration = 10000; // Toplam süre (5 saniye)
+  const interval = duration / cherryCount; // Her kiraz arasındaki zaman aralığı (ms)
 
   let cherriesDropped = 0;
 
+  // Kirazları aralıklı düşürmek için zamanlayıcı
   const dropCherry = setInterval(() => {
     if (cherriesDropped < cherryCount) {
       const cherry = document.createElement('span');
       cherry.innerHTML = '🍒';
       cherry.style.position = 'absolute';
-      cherry.style.fontSize = '24px';
-      cherry.style.left = Math.random() * 100 + 'vw';
-      cherry.style.top = '-50px';
-      cherry.style.animation = `fall ${Math.random() * 3 + 2}s linear`;
+      cherry.style.fontSize = '26px'; // Kiraz boyutu
+      cherry.style.left = Math.random() * 100 + 'vw'; // Rastgele yatay başlangıç
+      cherry.style.top = '-50px'; // Ekranın üstünden başlar
+      cherry.style.animation = `fall ${Math.random() * 3 + 2}s linear`; // 2-5 saniye düşme
       cherryContainer.appendChild(cherry);
 
+      // Animasyon bittiğinde kirazı kaldır
       cherry.addEventListener('animationend', () => {
         cherry.remove();
       });
 
       cherriesDropped++;
     } else {
-      clearInterval(dropCherry);
+      clearInterval(dropCherry); // Tüm kirazlar düştüğünde zamanlayıcıyı durdur
     }
-  }, interval);
+  }, interval); // Her kiraz için aralık (örneğin 100ms)
 
+  // 5 saniye sonra container’ı kaldır
   setTimeout(() => {
     cherryContainer.remove();
   }, duration);
 }
 
+// Kiraz düşme animasyonu için CSS (JavaScript içinde ekliyoruz)
 const styleSheet = document.createElement('style');
 styleSheet.textContent = `
   @keyframes fall {
@@ -208,7 +221,7 @@ styleSheet.textContent = `
 `;
 document.head.appendChild(styleSheet);
 
-// Konfeti
+// Konfeti fonksiyonu
 function confetti() {
   var $window = $(window),
     random = Math.random,
@@ -240,10 +253,11 @@ function confetti() {
     dThetaMin = .4,
     dThetaMax = .7 - dThetaMin;
 
+  // Rastgele renk üreten fonksiyon
   function randomColor() {
-    var r = Math.floor(Math.random() * 256);
-    var g = Math.floor(Math.random() * 256);
-    var b = Math.floor(Math.random() * 256);
+    var r = Math.floor(Math.random() * 256); // 0-255 arası rastgele kırmızı
+    var g = Math.floor(Math.random() * 256); // 0-255 arası rastgele yeşil
+    var b = Math.floor(Math.random() * 256); // 0-255 arası rastgele mavi
     return 'rgb(' + r + ',' + g + ',' + b + ')';
   }
 
@@ -296,7 +310,7 @@ function confetti() {
   container.style.overflow = 'visible';
   container.style.zIndex = '9999';
 
-  function Confetto() {
+  function Confetto() { // Tema parametresini kaldırdık
     this.frame = 0;
     this.outer = document.createElement('div');
     this.inner = document.createElement('div');
@@ -309,7 +323,7 @@ function confetti() {
     outerStyle.height = (sizeMin + sizeMax * random()) + 'px';
     innerStyle.width = '100%';
     innerStyle.height = '100%';
-    innerStyle.backgroundColor = randomColor();
+    innerStyle.backgroundColor = randomColor(); // Her konfeti için rastgele renk
 
     outerStyle.perspective = '50px';
     outerStyle.transform = 'rotate(' + (360 * random()) + 'deg)';
@@ -365,7 +379,7 @@ function confetti() {
 
       (function addConfetto() {
         if (isRunning && count++ < particles) {
-          var confetto = new Confetto();
+          var confetto = new Confetto(); // Tema olmadan direkt rastgele renk
           confetti.push(confetto);
           container.appendChild(confetto.outer);
           timer = setTimeout(addConfetto, spread * random());
