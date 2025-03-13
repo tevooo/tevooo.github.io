@@ -59,9 +59,9 @@ html {
 /* Paper */
 .paper {
   font-family: 'Patrick Hand', cursive;
-  width: 90%;
+  width: 100%;
   max-width: 800px;
-  height: 80vh; /* Defteri uzattım (önceki: 60vh) */
+  height: 100vh; /* Defteri uzattım (önceki: 60vh) */
   max-height: 720px; /* Maksimum yüksekliği artırdım (önceki: 540px) */
   margin: 15px 0;
   background: #fafafa;
@@ -77,7 +77,7 @@ html {
   top: 0;
   bottom: 0;
   left: 5px;
-  width: 45px;
+  width: 50px;
   background: radial-gradient(#616161 6px, transparent 7px) repeat-y;
   background-size: 30px 30px;
   border-right: 3px solid #D44147;
@@ -105,7 +105,7 @@ html {
   background: transparent;
   color: #3f3f44;
   font-family: 'Patrick Hand', cursive;
-  font-size: 18px;
+  font-size: 12px;
   box-sizing: border-box;
   z-index: 1;
 }
@@ -163,7 +163,7 @@ li span {
     line-height: 1.5;
   }
   .img {
-    width: 60vw;
+    width: 90vw;
   }
   #cakeTap, #tap, #trims {
     font-size: 14px;
@@ -172,15 +172,15 @@ li span {
     font-size: 14px;
   }
   li span {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 /* Daha küçük ekranlar için */
 @media (max-width: 480px) {
   .paper {
-    height: 65vh; /* Çok küçük ekranlar için optimize */
-    max-height: 500px;
+    height: 56vh; /* Çok küçük ekranlar için optimize */
+    max-height: 800px;
   }
   .img {
     width: 50vw;
