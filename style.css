@@ -1,73 +1,60 @@
 body,
 html {
-  height: 100%;  
-  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+  font-family: 'Patrick Hand', cursive; /* Varsayılan fontu Patrick Hand yaptık */
   text-align: center;
+  margin: 0; /* Varsayılan boşlukları kaldır */
+  padding: 0;
 }
 
 .bg {
-  /* Location of the image */
   background-image: url(./img/background.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  /* This is what makes the background image rescale based
-     on the container's size */
   background-size: cover;
-
-  /* Set a background color that will be displayed
-     while the background image is loading */
   background-color: #FEC0CD;
   height: 100%;
+  width: 100%;
+  overflow: auto; /* İçerik taşarsa kaydırma çubuğu */
 }
 
-
 .img {
-  display: inline-block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  top: 20px;
-  margin-bottom: 30px;
-  width: 350px;
+  width: 70vw; /* Genel resimler için %70 genişlik */
+  max-width: 350px;
+  height: auto;
 }
 
 #tap {
   display: inline-block;
+  font-size: 16px;
 }
 
 .foto {
   width: 80%;
   max-width: 400px;
   min-width: 300px;
-  margin-top: 100px;
-  /* margin-left: auto;
+  margin-top: 10vh; /* Yüzde yükseklik birimi */
+  display: block;
+  margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px; */
-  display: inline-block;
-  /* vertical-align: middle;
-  line-height: normal; */
 }
 
-
-
 /* Paper */
-@import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(https://fonts.googleapis.com/css?family=Roboto);
-
-
 .paper {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Patrick Hand', cursive; /* Defter fontu */
   position: relative;
   width: 90%;
   max-width: 800px;
   min-width: 300px;
-  height: 540px;
-  margin: 50px auto;
+  height: 60vh; /* Mobil için yükseklik */
+  max-height: 540px;
+  margin: 5vh auto; /* Yüzde ile margin */
   display: inline-block;
   vertical-align: middle;
-  line-height: normal;
   background: #fafafa;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
@@ -109,7 +96,7 @@ html {
   outline: 0;
   background: transparent;
   color: #3f3f44;
-  font-family: 'Handlee', cursive;
+  font-family: 'Patrick Hand', cursive;
   font-size: 18px;
   box-sizing: border-box;
   z-index: 1;
@@ -122,7 +109,7 @@ html {
   min-width: 200px;
   max-height: 350px;
   min-height: 100px;
-  top: 300px;
+  top: 20vh; /* Mobil için ayar */
   padding: 20px 0;
   display: inline-block;
   background: #fafafa;
@@ -137,13 +124,14 @@ html {
 
 #slideLima {
   position: relative;
-  top: 300px;
+  top: 20vh; /* Mobil için ayar */
 }
 
 #trims {
   position: relative;
-  top: 300px;
+  top: 20vh;
   display: inline-block;
+  font-size: 16px;
 }
 
 h1 {
@@ -175,7 +163,28 @@ body {
 .container {
   color: #333;
   position: relative;
-  top: 250px;
+  top: 20vh; /* Mobil için ayar */
   padding: 0;
   text-align: center;
+}
+
+/* Mobil için medya sorguları */
+@media (max-width: 768px) {
+  .paper {
+    height: 50vh; /* Daha küçük ekranlar için */
+    margin: 3vh auto;
+  }
+  .paper-content .teks {
+    font-size: 16px; /* Mobil için küçült */
+    line-height: 1.5;
+  }
+  .kotak, #slideLima, #trims, .container {
+    top: 10vh; /* Mobil için daha az boşluk */
+  }
+  li {
+    font-size: 14px; /* Geri sayım için */
+  }
+  li span {
+    font-size: 20px;
+  }
 }
