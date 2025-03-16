@@ -165,7 +165,7 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1400px; /* Konteyneri büyüttüm */
+  max-width: 1800px; /* Konteyneri büyüttüm */
   z-index: 10;
 }
 
