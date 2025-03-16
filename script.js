@@ -257,46 +257,43 @@ function cherryRain() {
   const interval = duration / cherryCount;
 
   let cherriesDropped = 0;
-
   const dropCherry = setInterval(() => {
-    if (cherriesDropped < cherryCount) {
-      const cherry = document.createElement('span');
-      cherry.innerHTML = '🍒'
-      cherry.innerHTML = '🍓'
-      cherry.innerHTML = '🍊'
-      cherry.innerHTML = '🍍';
-      cherry.style.position = 'absolute';
-      cherry.style.fontSize = '18px';
-      cherry.style.left = Math.random() * 100 + 'vw';
-      cherry.style.top = '-50px';
-      cherry.style.animation = `fall ${Math.random() * 6 + 2}s linear`;
-      cherryContainer.appendChild(cherry);
-
-
+     if (cherriesDropped < cherryCount) {
+       const cherry = document.createElement('span');
+       cherry.innerHTML = '🍒'
+       cherry.innerHTML = '🍓'
+       cherry.innerHTML = '🍊'
+       cherry.innerHTML = '🍍';
+       cherry.style.position = 'absolute';
+       cherry.style.fontSize = '18px';
+       cherry.style.left = Math.random() * 100 + 'vw';
+       cherry.style.top = '-50px';
+       cherry.style.animation = `fall ${Math.random() * 6 + 2}s linear`;
+       cherryContainer.appendChild(cherry);
 
       cherry.addEventListener('animationend', () => {
-        cherry.remove();
-      });
-
-      cherriesDropped++;
-    } else {
-      clearInterval(dropCherry);
-    }
-  }, interval);
-
-  setTimeout(() => {
-    cherryContainer.remove();
-  }, duration);
-}
-
-const styleSheet = document.createElement('style');
-styleSheet.textContent = `
-  @keyframes fall {
-    0% { transform: translateY(-50px); }
-    100% { transform: translateY(100vh); }
-  }
-`;
-document.head.appendChild(styleSheet);
+         cherry.remove();
+       });
+ 
+       cherriesDropped++;
+     } else {
+       clearInterval(dropCherry);
+     }
+   }, interval);
+ 
+   setTimeout(() => {
+     cherryContainer.remove();
+   }, duration);
+ }
+ 
+ const styleSheet = document.createElement('style');
+ styleSheet.textContent = `
+   @keyframes fall {
+     0% { transform: translateY(-50px); }
+     100% { transform: translateY(100vh); }
+   }
+ `;
+ document.head.appendChild(styleSheet);
 
 // Konfeti fonksiyonu
 function confetti() {
