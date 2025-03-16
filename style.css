@@ -165,13 +165,13 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1200px; /* Konteyneri büyüttüm */
+  max-width: 1400px; /* Konteyneri büyüttüm */
   z-index: 10;
 }
 
 #slideFoto .img {
-  width: 70vw; /* Ekranın %70’i */
-  max-width: 700px; /* Daha büyük bir sınır, istersen artır */
+  width: 80vw; /* Ekranın %70’i */
+  max-width: 800px; /* Daha büyük bir sınır, istersen artır */
   height: auto; /* Oranı korur */
   margin: 10px;
 }
