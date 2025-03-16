@@ -261,9 +261,9 @@ function cherryRain() {
   const dropCherry = setInterval(() => {
     if (cherriesDropped < cherryCount) {
       const cherry = document.createElement('span');
-      cherry.innerHTML = '🍒';
-      cherry.innerHTML = '🍓';
-      cherry.innerHTML = '🍊';
+      cherry.innerHTML = '🍒'
+      cherry.innerHTML = '🍓'
+      cherry.innerHTML = '🍊'
       cherry.innerHTML = '🍍';
       cherry.style.position = 'absolute';
       cherry.style.fontSize = '18px';
