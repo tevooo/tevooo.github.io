@@ -239,14 +239,14 @@ function cherryRain() {
   cherryContainer.style.position = 'fixed';
   cherryContainer.style.top = '0';
   cherryContainer.style.left = '0';
-  cherryContainer.style.width = '100vw';
-  cherryContainer.style.height = '100vh';
+  cherryContainer.style.width = '300vw';
+  cherryContainer.style.height = '300vh';
   cherryContainer.style.pointerEvents = 'none';
   cherryContainer.style.zIndex = '9999';
   document.body.appendChild(cherryContainer);
 
   const cherryCount = 450;
-  const duration = 2000;
+  const duration = 200000;
   const interval = duration / cherryCount;
 
   const fruits = ['🍒', '🍓', '🍊', '🍍']; // Meyve dizisi
@@ -257,10 +257,10 @@ function cherryRain() {
       const cherry = document.createElement('span');
       cherry.innerHTML = fruits[Math.floor(Math.random() * fruits.length)]; // Rastgele meyve
       cherry.style.position = 'absolute';
-      cherry.style.fontSize = '18px';
+      cherry.style.fontSize = '23px';
       cherry.style.left = Math.random() * 100 + 'vw';
       cherry.style.top = '-50px';
-      cherry.style.animation = `fall ${Math.random() * 6 + 2}s linear`;
+      cherry.style.animation = `fall ${Math.random() * 5 + 2}s linear`;
       cherryContainer.appendChild(cherry);
 
       cherry.addEventListener('animationend', () => {
