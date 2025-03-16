@@ -258,19 +258,24 @@ function cherryRain() {
 
   let cherriesDropped = 0;
 
-  const dropCherry = setInterval(() => {
-    if (cherriesDropped < cherryCount) {
-      const cherry = document.createElement('span');
-      cherry.innerHTML = '🍒'
-      cherry.innerHTML = '🍓'
-      cherry.innerHTML = '🍊'
-      cherry.innerHTML = '🍍';
-      cherry.style.position = 'absolute';
-      cherry.style.fontSize = '18px';
-      cherry.style.left = Math.random() * 100 + 'vw';
-      cherry.style.top = '-50px';
-      cherry.style.animation = `fall ${Math.random() * 6 + 2}s linear`;
-      cherryContainer.appendChild(cherry);
+const dropCherry = setInterval(() => {
+  if (cherriesDropped < cherryCount) {
+    const cherry = document.createElement('span');
+    
+    // Rastgele bir meyve seç
+    const fruits = ['🍒', '🍓', '🍊', '🍍'];
+    const randomFruit = fruits[Math.floor(Math.random() * fruits.length)];
+    cherry.innerHTML = randomFruit;
+
+    cherry.style.position = 'absolute';
+    cherry.style.fontSize = '18px';
+    cherry.style.left = Math.random() * 100 + 'vw';
+    cherry.style.top = '-50px';
+    cherry.style.animation = `fall ${Math.random() * 6 + 2}s linear`;
+    cherryContainer.appendChild(cherry);
+  }
+}, 100);
+
 
       cherry.addEventListener('animationend', () => {
         cherry.remove();
