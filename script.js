@@ -43,7 +43,7 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('March 26, 2025 23:59:59').getTime(),
+let countDown = new Date('March 11, 2025 23:59:59').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -261,12 +261,15 @@ function cherryRain() {
   const dropCherry = setInterval(() => {
     if (cherriesDropped < cherryCount) {
       const cherry = document.createElement('span');
-      cherry.innerHTML = '🍒🍓🍊🍍';
+      cherry.innerHTML = '🍒';
+      cherry.innerHTML = '🍓';
+      cherry.innerHTML = '🍊';
+      cherry.innerHTML = '🍍';
       cherry.style.position = 'absolute';
-      cherry.style.fontSize = '16px';
+      cherry.style.fontSize = '18px';
       cherry.style.left = Math.random() * 100 + 'vw';
       cherry.style.top = '-50px';
-      cherry.style.animation = `fall ${Math.random() * 4 + 2}s linear`;
+      cherry.style.animation = `fall ${Math.random() * 6 + 2}s linear`;
       cherryContainer.appendChild(cherry);
 
       cherry.addEventListener('animationend', () => {
@@ -305,7 +308,7 @@ function confetti() {
     frame = undefined,
     confetti = [];
 
-  var runFor = 5000;
+  var runFor = 7000;
   var isRunning = true;
 
   setTimeout(() => {
