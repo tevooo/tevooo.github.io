@@ -36,9 +36,7 @@ document.body.addEventListener('click', function () {
   }
 }, { once: true });
 
-const content = document.getElementById('content');
-const timer = document.getElementById('timer');
-
+// Geri sayım
 const second = 1000,
   minute = second * 60,
   hour = minute * 60,
@@ -47,19 +45,20 @@ let countDown = new Date('March 11, 2025 23:59:59').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
-    document.getElementById('days').innerText = Math.floor(distance / (day)),
-    document.getElementById('hours').innerText = Math.floor(distance % (day) / (hour)),
-    document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+    document.getElementById('days').innerText = Math.floor(distance / (day));
+    document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour));
+    document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute));
     document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
 
     if (distance < 0) {
-      timer.classList.add('d-none');
+      document.getElementById('timer').classList.add('d-none');
       confetti();
       clearInterval(x);
       _slideSatu();
     }
   }, second);
 
+// Slayt fonksiyonları
 const _slideSatu = function () {
   const tap = document.getElementById('tap');
   const slideSatu = document.getElementById('slideSatu');
@@ -181,7 +180,6 @@ const _slideLima = function () {
 
   if (!slideLima || !trims || !tap) {
     console.error("slideLima, trims veya tap bulunamadı!");
-    console.log("slideLima:", slideLima, "trims:", trims, "tap:", tap);
     return;
   }
 
@@ -192,7 +190,6 @@ const _slideLima = function () {
     trims.classList.remove('d-none');
     console.log("trims göründü");
 
-    // TypeIt yerine manuel yazma
     trims.innerHTML = "";
     const text = "iyi ki doğdun, iyi ki varsınnnn Seni çok ama çok seviyorum nice mutlu yıllara <333";
     let index = 0;
@@ -205,17 +202,13 @@ const _slideLima = function () {
         setTimeout(typeText, speed);
       } else {
         console.log("trims yazımı tamamlandı");
-        console.log("tap gösteriliyor");
         tap.classList.remove('d-none');
-        console.log("tap classList:", tap.classList.toString());
-        console.log("tap görünür mü:", tap.offsetParent !== null);
         tap.addEventListener('click', function () {
           console.log("tap’a tıklandı, Slide Lima kapanıyor");
           slideLima.classList.add('animate__fadeOut');
           trims.classList.add('animate__fadeOut');
           tap.classList.add('d-none');
           setTimeout(() => {
-            console.log("Slide Lima kapandı, _slideFoto’ya geçiyor");
             trims.classList.add('d-none');
             slideLima.classList.add('d-none');
             slideLima.classList.remove('animate__fadeOut');
@@ -226,7 +219,7 @@ const _slideLima = function () {
       }
     }
 
-    setTimeout(typeText, 2000); // 2 saniye gecikme
+    setTimeout(typeText, 2000);
   }, 1000);
 };
 
@@ -240,7 +233,7 @@ const _slideFoto = function () {
   }, 5000);
 };
 
-// Kiraz Yağmuru Fonksiyonu
+// Kiraz Yağmuru Fonksiyonu (Düzeltildi)
 function cherryRain() {
   const cherryContainer = document.createElement('div');
   cherryContainer.style.position = 'fixed';
@@ -256,11 +249,12 @@ function cherryRain() {
   const duration = 20000;
   const interval = duration / cherryCount;
 
+  const fruits = ['🍒', '🍓', '🍊', '🍍']; // Meyve dizisi
   let cherriesDropped = 0;
+
   const dropCherry = setInterval(() => {
     if (cherriesDropped < cherryCount) {
       const cherry = document.createElement('span');
-      const fruits = ['🍒', '🍓', '🍊', '🍍']; // Meyve dizisi
       cherry.innerHTML = fruits[Math.floor(Math.random() * fruits.length)]; // Rastgele meyve
       cherry.style.position = 'absolute';
       cherry.style.fontSize = '18px';
@@ -284,7 +278,7 @@ function cherryRain() {
   }, duration);
 }
 
-// Stil kısmı aynı kalabilir
+// Stil
 const styleSheet = document.createElement('style');
 styleSheet.textContent = `
   @keyframes fall {
