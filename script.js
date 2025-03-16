@@ -245,8 +245,8 @@ function cherryRain() {
   cherryContainer.style.zIndex = '9999';
   document.body.appendChild(cherryContainer);
 
-  const cherryCount = 250;
-  const duration = 20000;
+  const cherryCount = 450;
+  const duration = 2000;
   const interval = duration / cherryCount;
 
   const fruits = ['🍒', '🍓', '🍊', '🍍']; // Meyve dizisi
