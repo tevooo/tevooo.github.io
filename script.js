@@ -249,7 +249,7 @@ function cherryRain() {
   const duration = 20000;
   const interval = duration / cherryCount;
 
-  const fruits = ['🍒', '🍓', '🍊', '🍍']; // Meyve dizisi
+  const fruits = ['🍒', '🍓', '🍊', '🍍', '💞']; // Meyve dizisi
   let cherriesDropped = 0;
 
   const dropCherry = setInterval(() => {
