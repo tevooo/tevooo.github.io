@@ -153,7 +153,7 @@ const _slideTiga = function () {
         "mutluuu yıllarrrrrrr jimjimemmmm 🎈🎂"
       ],
       startDelay: 1000,
-      speed: 55,
+      speed: 45,
       waitUntilVisible: true,
       afterComplete: function () {
         console.log("teks2 yazımı tamamlandı");
@@ -191,9 +191,9 @@ const _slideLima = function () {
     console.log("trims göründü");
 
     trims.innerHTML = "";
-    const text = "iyi ki doğdun, iyi ki varsınnnn Seni çok ama çok seviyorum nice mutlu yıllara <333";
+    const text = "iyi ki doğdun, iyi ki varsınnnn seni çok ama çok seviyorum nice mutlu yıllara balimmmm";
     let index = 0;
-    const speed = 75;
+    const speed = 65;
 
     function typeText() {
       if (index < text.length) {
