@@ -158,20 +158,20 @@ html {
 
 #slideFoto {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1800px; /* Konteyneri büyüttüm */
+  max-width: 1920px; /* Konteyneri büyüttüm */
   z-index: 10;
 }
 
 #slideFoto .img {
   width: 80vw; /* Ekranın %70’i */
-  max-width: 800px; /* Daha büyük bir sınır, istersen artır */
+  max-width: 1000px; /* Daha büyük bir sınır, istersen artır */
   height: auto; /* Oranı korur */
   margin: 10px;
 }
