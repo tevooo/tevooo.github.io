@@ -269,9 +269,9 @@ li span {
     font-size: 20px;
   }
   #slideFoto .img {
-    width: 200vw; /* Mobilde daha geniş */
-    min-width: 400px; /* Sabit minimum piksel boyutu */
-    max-width: 90%;
+    width: 300vw; /* Mobilde daha geniş */
+    min-width: 600px; /* Sabit minimum piksel boyutu */
+    max-width: 100%;
     margin: 10px auto; /* Merkezleme */
   }
 }
