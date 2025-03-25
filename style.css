@@ -270,7 +270,7 @@ li span {
   }
   #slideFoto .img {
     width: 85vw; /* Mobilde daha geniş */
-    min-width: 300px; /* Sabit minimum piksel boyutu */
+    min-width: 350px; /* Sabit minimum piksel boyutu */
     max-width: 90%;
     margin: 10px auto; /* Merkezleme */
   }
@@ -314,7 +314,7 @@ li span {
   }
   #slideFoto .img {
     width: 90vw; /* Daha küçük ekranlarda iyice büyüt */
-    min-width: 300px; /* Sabit minimum piksel boyutu */
+    min-width: 350px; /* Sabit minimum piksel boyutu */
     max-width: 95%;
     margin: 8px auto; /* Merkezleme */
   }
