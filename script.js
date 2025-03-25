@@ -110,7 +110,7 @@ const _slideDua = function () {
         " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA 😁 BEN KİRAZİMA BAYILIYORUMMM <333"
       ],
       startDelay: 2000,
-      speed: 20,
+      speed: 30,
       waitUntilVisible: true,
       afterComplete: function () {
         console.log("teks1 yazımı tamamlandı");
@@ -153,7 +153,7 @@ const _slideTiga = function () {
         "mutluuu yıllarrrrrrr jimjimemmmm UJJJGELDİN #23🎂"
       ],
       startDelay: 1000,
-      speed: 20,
+      speed: 30,
       waitUntilVisible: true,
       afterComplete: function () {
         console.log("teks2 yazımı tamamlandı");
@@ -193,7 +193,7 @@ const _slideLima = function () {
     trims.innerHTML = "";
     const text = "iyi ki doğdun, iyi ki varsınnnn seni çok ama çok seviyorum nice mutlu yıllara balimmmm";
     let index = 0;
-    const speed = 65;
+    const speed = 45;
 
     function typeText() {
       if (index < text.length) {
