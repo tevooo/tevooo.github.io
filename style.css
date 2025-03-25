@@ -172,8 +172,7 @@ html {
 }
 
 #slideFoto .img {
-  width: 800px !important; /* Sabit genişlik */
-  min-width: 600px !important;
+  width: 100% !important; /* Ekranın tamamını kaplasın */
   max-width: 100% !important; /* Ekran genişliğini aşmasın */
   height: auto !important;
   margin: 12px auto !important;
@@ -274,9 +273,8 @@ li span {
     font-size: 20px;
   }
   #slideFoto .img {
-    width: 600px !important;
-    min-width: 600px !important;
-    max-width: 100% !important; /* Ekran genişliğini aşmasın */
+    width: 100% !important;
+    max-width: 100% !important;
     margin: 10px auto !important;
   }
 }
@@ -318,9 +316,8 @@ li span {
     min-height: 35vh;
   }
   #slideFoto .img {
-    width: 100% !important; /* Ekranın tamamını kaplasın */
-    min-width: 400px !important;
-    max-width: 100% !important; /* Ekran genişliğini aşmasın */
+    width: 100% !important;
+    max-width: 100% !important;
     margin: 8px auto !important;
   }
 }
