@@ -30,8 +30,8 @@ html {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  max-width: 900px;
-  height: 150vh;
+  max-width: 800px;
+  height: 120vh;
   padding: 10px;
   box-sizing: border-box;
   position: relative;
