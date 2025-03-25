@@ -87,7 +87,8 @@ html {
 
 .paper {
   font-family: 'Patrick Hand', cursive;
-  width: 90 amounted-width: 800px;
+  width: 90%;
+  max-width: 800px;
   height: 80vh;
   max-height: 720px;
   margin: 15px 0;
@@ -163,16 +164,18 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: none; /* Kapsayıcı sınırı kaldırıldı */
+  max-width: none;
   z-index: 10;
+  overflow: visible; /* Taşmayı göster */
 }
 
 #slideFoto .img {
-  width: 300vw; /* Varsayılan genişlik */
-  min-width: 600px; /* Minimum boyutu koru */
-  max-width: none; /* Sınır yok */
-  height: auto;
-  margin: 12px auto; /* Merkezleme */
+  width: 300vw !important; /* Varsayılan genişlik */
+  min-width: 600px !important; /* Minimum boyutu koru */
+  max-width: none !important; /* Sınır yok */
+  height: auto !important;
+  margin: 12px auto !important; /* Merkezleme */
+  object-fit: contain; /* Orantılı büyüme */
 }
 
 #slideLima {
@@ -269,10 +272,10 @@ li span {
     font-size: 20px;
   }
   #slideFoto .img {
-    width: 150vw; /* Mobilde daha geniş ama kontrollü */
-    min-width: 1000px; /* Sabit minimum */
-    max-width: none; /* Sınır yok */
-    margin: 10px auto;
+    width: 150vw !important; /* Mobilde daha geniş ama kontrollü */
+    min-width: 600px !important; /* Sabit minimum */
+    max-width: none !important;
+    margin: 10px auto !important;
   }
 }
 
@@ -313,9 +316,9 @@ li span {
     min-height: 35vh;
   }
   #slideFoto .img {
-    width: 120vw; /* Küçük ekranlarda biraz daha az */
-    min-width: 600px; /* Sabit minimum */
-    max-width: none; /* Sınır yok */
-    margin: 8px auto;
+    width: 120vw !important; /* Küçük ekranlarda biraz daha az */
+    min-width: 600px !important; /* Sabit minimum */
+    max-width: none !important;
+    margin: 8px auto !important;
   }
 }
