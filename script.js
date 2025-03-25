@@ -144,9 +144,9 @@ const _slideTiga = function () {
     console.log("teks2 göründü");
     new TypeIt("#teks2", {
       strings: [
-        "sen benim için çok değerlisin bir o kadar da özelsin bende yerin o kadar ki nasıl ifade edilir bilemiyorum telegramın bana bahşettiği en değerli şey sensin iyi ki varsın balım",
+        "sen benim için çok değerlisin bir o kadar da özelsin bende yerin o kadar farklı ki nasıl ifade edilir bilemiyorum telegramın bana bahşettiği en değerli şey sensin iyi ki varsın balım 🥳",
         " ",
-        "her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan, seninle konuşmaktan, seninle bir şeyler paylaşmaktan, senin yanında olmaktan mutluluk duyacağım ❤",
+        "her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan, seninle konuşmaktan, seninle bir şeyler paylaşmaktan, senin yanında olmaktan mutluluk duyacağım 💞",
         " ",
         "iyi ki doğdun iyi ki varsın kirazimmmmm 🍒🍒",
         " ",
