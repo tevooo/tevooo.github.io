@@ -166,16 +166,18 @@ html {
   width: 100%;
   max-width: none;
   z-index: 10;
-  overflow: visible; /* Taşmayı göster */
+  overflow: visible;
 }
 
 #slideFoto .img {
-  width: 300vw !important; /* Varsayılan genişlik */
+  width: 100% !important; /* Ekranın tamamını kaplasın */
   min-width: 600px !important; /* Minimum boyutu koru */
   max-width: none !important; /* Sınır yok */
   height: auto !important;
-  margin: 12px auto !important; /* Merkezleme */
+  margin: 12px auto !important;
   object-fit: contain; /* Orantılı büyüme */
+  transform: scale(1.5); /* Resmi 1.5 kat büyüt */
+  transform-origin: center; /* Ölçeklendirme merkezden */
 }
 
 #slideLima {
@@ -272,10 +274,11 @@ li span {
     font-size: 20px;
   }
   #slideFoto .img {
-    width: 150vw !important; /* Mobilde daha geniş ama kontrollü */
-    min-width: 600px !important; /* Sabit minimum */
+    width: 100% !important;
+    min-width: 600px !important;
     max-width: none !important;
     margin: 10px auto !important;
+    transform: scale(1.5) !important;
   }
 }
 
@@ -316,9 +319,10 @@ li span {
     min-height: 35vh;
   }
   #slideFoto .img {
-    width: 120vw !important; /* Küçük ekranlarda biraz daha az */
-    min-width: 600px !important; /* Sabit minimum */
+    width: 100% !important;
+    min-width: 600px !important;
     max-width: none !important;
     margin: 8px auto !important;
+    transform: scale(1.5) !important;
   }
 }
