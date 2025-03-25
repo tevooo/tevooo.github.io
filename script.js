@@ -110,7 +110,7 @@ const _slideDua = function () {
         " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA 😁 BEN KİRAZİMA BAYILIYORUMMM <333"
       ],
       startDelay: 2000,
-      speed: 45,
+      speed: 20,
       waitUntilVisible: true,
       afterComplete: function () {
         console.log("teks1 yazımı tamamlandı");
@@ -153,7 +153,7 @@ const _slideTiga = function () {
         "mutluuu yıllarrrrrrr jimjimemmmm UJJJGELDİN #23🎂"
       ],
       startDelay: 1000,
-      speed: 45,
+      speed: 20,
       waitUntilVisible: true,
       afterComplete: function () {
         console.log("teks2 yazımı tamamlandı");
