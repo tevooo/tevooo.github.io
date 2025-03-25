@@ -270,7 +270,7 @@ li span {
   }
   #slideFoto .img {
     width: 150vw; /* Mobilde daha geniş ama kontrollü */
-    min-width: 600px; /* Sabit minimum */
+    min-width: 1000px; /* Sabit minimum */
     max-width: none; /* Sınır yok */
     margin: 10px auto;
   }
