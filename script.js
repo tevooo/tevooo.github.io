@@ -41,7 +41,7 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('March 25, 2025 00:00:04').getTime(),
+let countDown = new Date('March 26, 2025 00:00:04').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -110,7 +110,7 @@ const _slideDua = function () {
         " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA 😁 BEN KİRAZİMA BAYILIYORUMMM <333"
       ],
       startDelay: 2000,
-      speed: 30,
+      speed: 45,
       waitUntilVisible: true,
       afterComplete: function () {
         console.log("teks1 yazımı tamamlandı");
@@ -144,7 +144,7 @@ const _slideTiga = function () {
     console.log("teks2 göründü");
     new TypeIt("#teks2", {
       strings: [
-        "sen benim için çok değerlisin bir o kadar da özelsin bende yerin o kadar farklı ki nasıl ifade edilir bilemiyorum... sen benim için her şeysin, hayatın bahşettiği en güzel şeysin iyi ki varsın kirazımmm 💝",
+        "benim için çok değerlisin bir o kadar da özelsin bende yerin o kadar farklı ki nasıl ifade edilir bilemiyorum... benim için her şeysin, hayatın bahşettiği en güzel şeysin iyi ki varsın kirazımmm 💝",
         " ",
         "her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan, seninle konuşmaktan, seninle bir şeyler paylaşmaktan, senin yanında olmaktan mutluluk duyacağım 💞",
         " ",
@@ -153,7 +153,7 @@ const _slideTiga = function () {
         "mutluuu yıllarrrrrrr jimjimemmmm UJJJGELDİN #23🎂"
       ],
       startDelay: 1000,
-      speed: 30,
+      speed: 45,
       waitUntilVisible: true,
       afterComplete: function () {
         console.log("teks2 yazımı tamamlandı");
