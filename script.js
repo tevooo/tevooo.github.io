@@ -41,7 +41,7 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('March 11, 2025 23:59:59').getTime(),
+let countDown = new Date('March 26, 2025 00:00:04').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -99,11 +99,11 @@ const _slideDua = function () {
     new TypeIt("#teks1", {
       strings: [
         "kirazim balımmmm 🍒,",
-        "neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn (gözümün nurusuu), jimjimemmmm 💋",
+        "neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn (gözümün nurusuu), jimjimemmmm 💋 ve daha niceleri...",
         " ",
-        "en ennn önemlisi değer verdiğim sevebildiğim tek ZEHRA 🤭🤭",
+        "en ennn önemlisi değer verdiğim sevebildiğim tek ZEHRA 🤭",
         " ",
-        "iyi ki doğdunnnn iyi ki varsın canikommm yeni yaşın senin kadar güzel parlak bir geleceğe vesile olsunnnn öncelikli temmenimiz her zaman olduğu gibi mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara öncülük ediyor olması<333",
+        "iyi ki doğdunnnn iyi ki varsın canikomm yeni yaşın senin kadar güzel parlak bir geleceğe vesile olsunnnn öncelikli temmenimiz mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara öncülük ediyor olması<333",
         " ",
         "kalbinin her ne kadar iyi olduğunu reddediyor bu uzlaşıya yanışmıyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz bunun farkına var artık!",
         " ",
