@@ -164,13 +164,13 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
+  max-width: 2423px;
   z-index: 10;
 }
 
 #slideFoto .img {
   width: 60vw;
-  max-width: 800px;
+  max-width: 2423px;
   height: auto;
   margin: 12px;
 }
@@ -269,8 +269,8 @@ li span {
     font-size: 20px;
   }
   #slideFoto .img {
-    width: 85vw; /* Mobilde daha geniş */
-    min-width: 350px; /* Sabit minimum piksel boyutu */
+    width: 100vw; /* Mobilde daha geniş */
+    min-width: 400px; /* Sabit minimum piksel boyutu */
     max-width: 90%;
     margin: 10px auto; /* Merkezleme */
   }
