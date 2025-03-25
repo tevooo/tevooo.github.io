@@ -98,16 +98,16 @@ const _slideDua = function () {
     console.log("teks1 göründü");
     new TypeIt("#teks1", {
       strings: [
-        "kirazimm balımmmm 🍒,",
-        "benimmm neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn, jimjimemmmm 💋",
+        "kirazim balımmmm 🍒,",
+        "neonnn gözlümmm, porselen ciltlim, vanilya tanrıçam, güzel bakımlı eşşeğimm, kaçak çayımmm, rehniya çaweminnnn (gözümün nurusuu), jimjimemmmm 💋",
         " ",
-        "en önemlisiii sevebildiğim değer verdiğim tek Zehra 🤭🤭",
+        "en ennn önemlisi değer verdiğim sevebildiğim tek ZEHRA 🤭🤭",
         " ",
-        "iyi ki doğdunnnn iyi ki varsın hayatimmmm. yeni yaşın sana mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara vesile olsun💝",
+        "iyi ki doğdunnnn iyi ki varsın canikommm yeni yaşın senin kadar güzel parlak bir geleceğe vesile olsunnnn öncelikli temmenimiz her zaman olduğu gibi mutluluk, huzur, başarı, sevdiklerin ile dolu dolu nice mutlu yaşlara öncülük ediyor olması<333",
         " ",
-        "kalbinin her ne kadar iyi olduğunu reddediyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz. bunu çok içten bir şekilde söylüyorum cidden çok iyi bir insansın bana yanstığın imajına bayılıyorummmm.",
+        "kalbinin her ne kadar iyi olduğunu reddediyor bu uzlaşıya yanışmıyor olsan da kalbin en az gözlerin kadar güzel, porselen cildin kadar kusursuz bunun farkına var artık!",
         " ",
-        " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA 😁😁"
+        " REELDE ZEHRA PROFİLİN İLE İNSANLARA ZULÜM ETMİYORSAN BAŞKA 😁 BEN KİRAZİMA BAYILIYORUMMM <333"
       ],
       startDelay: 2000,
       speed: 45,
@@ -144,13 +144,13 @@ const _slideTiga = function () {
     console.log("teks2 göründü");
     new TypeIt("#teks2", {
       strings: [
-        "sen benim için çok değerlisin bir o kadar özelsin, iyi ki tanıştık iyi ki varsınnnn 🥳🥳",
+        "sen benim için çok değerlisin bir o kadar da özelsin bende yerin o kadar ki nasıl ifade edilir bilemiyorum telegramın bana bahşettiği en değerli şey sensin iyi ki varsın balım",
         " ",
-        "her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan seninle vakit geçirmekten sana destek olmaktan mutluluk duyacağım ❤",
+        "her ne kadar aramızda ki bu iletişimin bir gün sona ereceği bilinci içinde olsakta son salisesine kadar seninle olmaktan, seninle konuşmaktan, seninle bir şeyler paylaşmaktan, senin yanında olmaktan mutluluk duyacağım ❤",
         " ",
-        "tekrardan iyi ki doğdun iyi ki varsın kirazimmmmm 🍒🍒",
+        "iyi ki doğdun iyi ki varsın kirazimmmmm 🍒🍒",
         " ",
-        "mutluuu yıllarrrrrrr jimjimemmmm 🎈🎂"
+        "mutluuu yıllarrrrrrr jimjimemmmm UJJJGELDİN #23🎂"
       ],
       startDelay: 1000,
       speed: 45,
@@ -257,7 +257,7 @@ function cherryRain() {
       const cherry = document.createElement('span');
       cherry.innerHTML = fruits[Math.floor(Math.random() * fruits.length)]; // Rastgele meyve
       cherry.style.position = 'absolute';
-      cherry.style.fontSize = '18px';
+      cherry.style.fontSize = '16px';
       cherry.style.left = Math.random() * 100 + 'vw';
       cherry.style.top = '-50px';
       cherry.style.animation = `fall ${Math.random() * 6 + 2}s linear`;
